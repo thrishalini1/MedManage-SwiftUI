@@ -48,8 +48,9 @@
 		0541725429F69C1600299405 /* PatientViews */ = {
 			isa = PBXGroup;
 			children = (
-				0541724E29F69AF200299405 /* LoginScreen.swift */,
 				0541724D29F69AF200299405 /* OnboardingScreen.swift */,
+				0541724E29F69AF200299405 /* LoginScreen.swift */,
+				C142308129F69C6A00EEB837 /* PatientRegistrationForm.swift */,
 			);
 			path = PatientViews;
 			sourceTree = "<group>";
@@ -83,7 +84,6 @@
 		05C7526B29F69860004D3FE0 /* MedManage-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				C142308129F69C6A00EEB837 /* PatientRegistrationForm.swift */,
 				0541725529F69C9400299405 /* PatientModel */,
 				0541725429F69C1600299405 /* PatientViews */,
 				05C7526C29F69860004D3FE0 /* MedManage_SwiftUIApp.swift */,
