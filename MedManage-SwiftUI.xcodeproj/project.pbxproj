@@ -15,6 +15,7 @@
 		05C7527129F69860004D3FE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05C7527029F69860004D3FE0 /* Assets.xcassets */; };
 		05C7527429F69860004D3FE0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05C7527329F69860004D3FE0 /* Preview Assets.xcassets */; };
 		95DC2421A9CB3220637B6611 /* Pods_MedManage_SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0706AA6F216E9044646314BC /* Pods_MedManage_SwiftUI.framework */; };
+		C142308229F69C6A00EEB837 /* PatientRegistrationForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C142308129F69C6A00EEB837 /* PatientRegistrationForm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		05C7527329F69860004D3FE0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0706AA6F216E9044646314BC /* Pods_MedManage_SwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedManage_SwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873944B3356E20FDD63140A3 /* Pods-MedManage-SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedManage-SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-MedManage-SwiftUI/Pods-MedManage-SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
+		C142308129F69C6A00EEB837 /* PatientRegistrationForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientRegistrationForm.swift; sourceTree = "<group>"; };
 		F73A72B23A99F708AAE4987A /* Pods-MedManage-SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedManage-SwiftUI.release.xcconfig"; path = "Target Support Files/Pods-MedManage-SwiftUI/Pods-MedManage-SwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,6 +83,7 @@
 		05C7526B29F69860004D3FE0 /* MedManage-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				C142308129F69C6A00EEB837 /* PatientRegistrationForm.swift */,
 				0541725529F69C9400299405 /* PatientModel */,
 				0541725429F69C1600299405 /* PatientViews */,
 				05C7526C29F69860004D3FE0 /* MedManage_SwiftUIApp.swift */,
@@ -234,6 +237,7 @@
 				05C7526F29F69860004D3FE0 /* ContentView.swift in Sources */,
 				0541725129F69AF200299405 /* LoginScreen.swift in Sources */,
 				05C7526D29F69860004D3FE0 /* MedManage_SwiftUIApp.swift in Sources */,
+				C142308229F69C6A00EEB837 /* PatientRegistrationForm.swift in Sources */,
 				0541725029F69AF200299405 /* OnboardingScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
