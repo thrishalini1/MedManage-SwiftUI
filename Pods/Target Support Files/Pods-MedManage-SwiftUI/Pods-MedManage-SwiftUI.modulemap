@@ -1,0 +1,6 @@
+framework module Pods_MedManage_SwiftUI {
+  umbrella header "Pods-MedManage-SwiftUI-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -11,6 +11,7 @@
 		05C7526F29F69860004D3FE0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C7526E29F69860004D3FE0 /* ContentView.swift */; };
 		05C7527129F69860004D3FE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05C7527029F69860004D3FE0 /* Assets.xcassets */; };
 		05C7527429F69860004D3FE0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05C7527329F69860004D3FE0 /* Preview Assets.xcassets */; };
+		95DC2421A9CB3220637B6611 /* Pods_MedManage_SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0706AA6F216E9044646314BC /* Pods_MedManage_SwiftUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,9 @@
 		05C7526E29F69860004D3FE0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		05C7527029F69860004D3FE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05C7527329F69860004D3FE0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0706AA6F216E9044646314BC /* Pods_MedManage_SwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedManage_SwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		873944B3356E20FDD63140A3 /* Pods-MedManage-SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedManage-SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-MedManage-SwiftUI/Pods-MedManage-SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
+		F73A72B23A99F708AAE4987A /* Pods-MedManage-SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedManage-SwiftUI.release.xcconfig"; path = "Target Support Files/Pods-MedManage-SwiftUI/Pods-MedManage-SwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95DC2421A9CB3220637B6611 /* Pods_MedManage_SwiftUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +42,8 @@
 			children = (
 				05C7526B29F69860004D3FE0 /* MedManage-SwiftUI */,
 				05C7526A29F69860004D3FE0 /* Products */,
+				C582B5A9B7B40585DEAB6F62 /* Pods */,
+				5F4C46EB26297F7478A81B47 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		5F4C46EB26297F7478A81B47 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0706AA6F216E9044646314BC /* Pods_MedManage_SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C582B5A9B7B40585DEAB6F62 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				873944B3356E20FDD63140A3 /* Pods-MedManage-SwiftUI.debug.xcconfig */,
+				F73A72B23A99F708AAE4987A /* Pods-MedManage-SwiftUI.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05C7527729F69860004D3FE0 /* Build configuration list for PBXNativeTarget "MedManage-SwiftUI" */;
 			buildPhases = (
+				50E9D11A97335CC17011FFF3 /* [CP] Check Pods Manifest.lock */,
 				05C7526529F69860004D3FE0 /* Sources */,
 				05C7526629F69860004D3FE0 /* Frameworks */,
 				05C7526729F69860004D3FE0 /* Resources */,
+				A75C3D2ECE9FF6CD31AC8706 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		50E9D11A97335CC17011FFF3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MedManage-SwiftUI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A75C3D2ECE9FF6CD31AC8706 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MedManage-SwiftUI/Pods-MedManage-SwiftUI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MedManage-SwiftUI/Pods-MedManage-SwiftUI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MedManage-SwiftUI/Pods-MedManage-SwiftUI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		05C7526529F69860004D3FE0 /* Sources */ = {
@@ -261,6 +330,7 @@
 		};
 		05C7527829F69860004D3FE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 873944B3356E20FDD63140A3 /* Pods-MedManage-SwiftUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -289,6 +359,7 @@
 		};
 		05C7527929F69860004D3FE0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F73A72B23A99F708AAE4987A /* Pods-MedManage-SwiftUI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
