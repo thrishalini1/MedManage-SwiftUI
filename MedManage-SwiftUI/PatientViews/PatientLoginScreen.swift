@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct LoginScreen: View {
+struct PatientLoginScreen: View {
     
     @State var username: String = ""
     @State private var password: String = ""
@@ -16,7 +16,7 @@ struct LoginScreen: View {
     
     var body: some View {
         ZStack {
-            Color.white.ignoresSafeArea()
+//            Color.ignoresSafeArea()
             VStack {
                 Text("MedManage")
                     .foregroundColor(Color("BlueMain"))
@@ -39,13 +39,14 @@ struct LoginScreen: View {
                         .font(.system(size: 25))
                         .fontWeight(.semibold)
                         .padding(.bottom, -15)
+                        .foregroundColor(Color.primary)
                     VStack {
                         TextField("Username", text: $username)
                             .frame(width: 230, height: 50)
                             .padding(.bottom, -20)
                         Divider()
                             .frame(width: 230)
-                            .overlay(.black)
+                            .overlay(.primary)
                         
                     }
                 }
@@ -61,7 +62,7 @@ struct LoginScreen: View {
                             .padding(.bottom, -20)
                         Divider()
                             .frame(width: 230)
-                            .overlay(.black)
+                            .overlay(Color.secondary)
                     }
                     
                 }
@@ -103,6 +104,6 @@ struct LoginScreen: View {
 }
 struct LoginScreen_Previews: PreviewProvider {
     static var previews: some View {
-        LoginScreen()
+        PatientLoginScreen()
     }
 }

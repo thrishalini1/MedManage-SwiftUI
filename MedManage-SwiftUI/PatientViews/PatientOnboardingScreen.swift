@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct OnboardingScreen: View {
+struct PatientOnboardingScreen: View {
     var onboardngPages: [Page] = Page.onboardingPages
     @State private var currentStep = 0
     
@@ -75,7 +75,7 @@ struct OnboardingScreen: View {
                         }
                         label: {
                             NavigationLink(
-                            destination: LoginScreen()){
+                            destination: PatientLoginScreen()){
                                 Text("Get Started")
                                     .frame(width: 200)
                                     .foregroundColor(.white)
@@ -108,6 +108,6 @@ struct OnboardingScreen: View {
 
 struct OnboardingScreen_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingScreen()
+        PatientOnboardingScreen()
     }
 }
