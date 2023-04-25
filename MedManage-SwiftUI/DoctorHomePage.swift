@@ -117,7 +117,7 @@ struct UpcomingCard: View {
                 RoundedRectangle(cornerRadius: 20)
                     .frame(width: 250, height: 250)
                     .shadow(radius: 5, x:0, y: 5)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(.primary)
                 
                 VStack(alignment: .leading){
                     Text("Mr. John Johnson")

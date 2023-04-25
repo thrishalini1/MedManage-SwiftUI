@@ -147,18 +147,18 @@ struct UpcomingAppointmentCard: View {
                             .frame(width: 70)
                             .foregroundColor(Color.gray.opacity(0.2))
                         Image(systemName: "calendar")
-                            .foregroundColor(.white)
+                            .foregroundColor(Color(UIColor.systemBackground))
                             .font(.title)
                     }
                     
                     VStack(spacing: -10){
                         Text("April")
                             .font(.body)
-                            .foregroundColor(.white)
+                            .foregroundColor(Color(UIColor.systemBackground))
                         
                         Text("19")
                             .font(.system(size: 48))
-                            .foregroundColor(.white)
+                            .foregroundColor(Color(UIColor.systemBackground))
                             .fontWeight(.heavy)
                     }
                 }
@@ -166,13 +166,13 @@ struct UpcomingAppointmentCard: View {
                 VStack(alignment: .leading, spacing: -5){
                     Text("Dr. Ranit Patel")
                         .font(.largeTitle)
-                        .foregroundColor(.white)
+                        .foregroundColor(Color(UIColor.systemBackground))
                         .fontWeight(.heavy)
                         .frame(width: 150, height: 80)
                         .minimumScaleFactor(0.6)
                     
                     Text("Urologist")
-                        .foregroundColor(.white)
+                        .foregroundColor(Color(UIColor.systemBackground))
                         .padding(.leading,5)
                 }
             }
