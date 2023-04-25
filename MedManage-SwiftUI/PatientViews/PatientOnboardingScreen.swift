@@ -4,7 +4,6 @@
 //
 //  Created by Ritu Raj Singh on 24/04/23.
 //
-
 import SwiftUI
 
 struct PatientOnboardingScreen: View {

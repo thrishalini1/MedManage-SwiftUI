@@ -98,7 +98,7 @@ struct PatientRegistrationForm: View {
                     .frame(maxWidth: .infinity)
             })
             .buttonStyle(.borderedProminent)
-            .tint(.green)
+            .tint(.blue)
         } // Form
         .onSubmit {
             switchField(currentField: fieldFocus ?? .fName)
@@ -117,12 +117,12 @@ struct PatientRegistrationForm: View {
         case .pNumber:
             fieldFocus = .age
         case .age:
+            fieldFocus = .bloodGroup
+        case .bloodGroup:
             fieldFocus = .gender
         case .gender:
             fieldFocus = .birthDate
         case .birthDate:
-            fieldFocus = .bloodGroup
-        case .bloodGroup:
             fieldFocus = .reasonReg
         case .reasonReg:
             fieldFocus = .historyM
@@ -134,7 +134,7 @@ struct PatientRegistrationForm: View {
     func switchFieldRev(currentField: FocusedField){
         switch currentField {
         case .fName:
-            fieldFocus = .age
+            fieldFocus = .historyM
         case .lName:
             fieldFocus = .fName
         case .email:
@@ -144,15 +144,15 @@ struct PatientRegistrationForm: View {
         case .age:
             fieldFocus = .pNumber
         case .gender:
-            fieldFocus = .age
+            fieldFocus = .bloodGroup
         case .birthDate:
             fieldFocus = .gender
         case .bloodGroup:
-            fieldFocus = .birthDate
+            fieldFocus = .age
         case .reasonReg:
-            fieldFocus = .reasonReg
+            fieldFocus = .birthDate
         case .historyM:
-            fieldFocus = .fName
+            fieldFocus = .reasonReg
         }
     }
   
