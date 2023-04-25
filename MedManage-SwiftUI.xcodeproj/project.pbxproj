@@ -14,6 +14,7 @@
 		95DC2421A9CB3220637B6611 /* Pods_MedManage_SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0706AA6F216E9044646314BC /* Pods_MedManage_SwiftUI.framework */; };
 		C914746C29F6A230009E8F23 /* DoctorHomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C914746B29F6A230009E8F23 /* DoctorHomePage.swift */; };
 		C914746E29F6A25B009E8F23 /* AppointmentDetailModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C914746D29F6A25B009E8F23 /* AppointmentDetailModalView.swift */; };
+		C914747029F6A58D009E8F23 /* PatientHomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C914746F29F6A58D009E8F23 /* PatientHomePage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		873944B3356E20FDD63140A3 /* Pods-MedManage-SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedManage-SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-MedManage-SwiftUI/Pods-MedManage-SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		C914746B29F6A230009E8F23 /* DoctorHomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorHomePage.swift; sourceTree = "<group>"; };
 		C914746D29F6A25B009E8F23 /* AppointmentDetailModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentDetailModalView.swift; sourceTree = "<group>"; };
+		C914746F29F6A58D009E8F23 /* PatientHomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientHomePage.swift; sourceTree = "<group>"; };
 		F73A72B23A99F708AAE4987A /* Pods-MedManage-SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedManage-SwiftUI.release.xcconfig"; path = "Target Support Files/Pods-MedManage-SwiftUI/Pods-MedManage-SwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +67,7 @@
 				05C7526C29F69860004D3FE0 /* MedManage_SwiftUIApp.swift */,
 				05C7526E29F69860004D3FE0 /* ContentView.swift */,
 				C914746B29F6A230009E8F23 /* DoctorHomePage.swift */,
+				C914746F29F6A58D009E8F23 /* PatientHomePage.swift */,
 				C914746D29F6A25B009E8F23 /* AppointmentDetailModalView.swift */,
 				05C7527029F69860004D3FE0 /* Assets.xcassets */,
 				05C7527229F69860004D3FE0 /* Preview Content */,
@@ -211,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C914747029F6A58D009E8F23 /* PatientHomePage.swift in Sources */,
 				05C7526F29F69860004D3FE0 /* ContentView.swift in Sources */,
 				05C7526D29F69860004D3FE0 /* MedManage_SwiftUIApp.swift in Sources */,
 				C914746E29F6A25B009E8F23 /* AppointmentDetailModalView.swift in Sources */,

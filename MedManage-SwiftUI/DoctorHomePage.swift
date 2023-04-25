@@ -172,6 +172,7 @@ struct UpcomingCard: View {
                 AppointmentDetailModalView()
                 .presentationDetents([.fraction(0.7)])
         })
+        
     }
 }
 
