@@ -12,6 +12,7 @@
 		05C7527129F69860004D3FE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05C7527029F69860004D3FE0 /* Assets.xcassets */; };
 		05C7527429F69860004D3FE0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05C7527329F69860004D3FE0 /* Preview Assets.xcassets */; };
 		95DC2421A9CB3220637B6611 /* Pods_MedManage_SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0706AA6F216E9044646314BC /* Pods_MedManage_SwiftUI.framework */; };
+		A9D48F9129F7ACD500CD59FF /* AppointmentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D48F9029F7ACD500CD59FF /* AppointmentDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		05C7527329F69860004D3FE0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0706AA6F216E9044646314BC /* Pods_MedManage_SwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedManage_SwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873944B3356E20FDD63140A3 /* Pods-MedManage-SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedManage-SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-MedManage-SwiftUI/Pods-MedManage-SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
+		A9D48F9029F7ACD500CD59FF /* AppointmentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentDetailView.swift; sourceTree = "<group>"; };
 		F73A72B23A99F708AAE4987A /* Pods-MedManage-SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedManage-SwiftUI.release.xcconfig"; path = "Target Support Files/Pods-MedManage-SwiftUI/Pods-MedManage-SwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +62,7 @@
 			children = (
 				05C7526C29F69860004D3FE0 /* MedManage_SwiftUIApp.swift */,
 				05C7526E29F69860004D3FE0 /* ContentView.swift */,
+				A9D48F9029F7ACD500CD59FF /* AppointmentDetailView.swift */,
 				05C7527029F69860004D3FE0 /* Assets.xcassets */,
 				05C7527229F69860004D3FE0 /* Preview Content */,
 			);
@@ -88,7 +91,6 @@
 				873944B3356E20FDD63140A3 /* Pods-MedManage-SwiftUI.debug.xcconfig */,
 				F73A72B23A99F708AAE4987A /* Pods-MedManage-SwiftUI.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,6 +210,7 @@
 			files = (
 				05C7526F29F69860004D3FE0 /* ContentView.swift in Sources */,
 				05C7526D29F69860004D3FE0 /* MedManage_SwiftUIApp.swift in Sources */,
+				A9D48F9129F7ACD500CD59FF /* AppointmentDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +347,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -373,6 +377,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
