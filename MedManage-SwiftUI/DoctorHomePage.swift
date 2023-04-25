@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct DoctorHomePage: View {
     
     @State var showModalView = false
@@ -35,15 +36,10 @@ struct DoctorHomePage: View {
 
 struct BlueLine: View {
     var body: some View{
-        HStack{
-            Spacer()
-            
-            Rectangle()
-                .foregroundColor(Color.blue.opacity(0.2))
-                .frame(width: 360, height: 1)
-            
-            Spacer()
-        }
+        Divider()
+            .background(Color.blue.opacity(0.5))
+            .padding(.leading, 10)
+            .padding(.trailing, 10)
     }
 }
 
@@ -61,7 +57,7 @@ struct PageContent: View {
                     Text("Upcoming")
                         .padding(.leading,10)
                         .font(.title2)
-                        .foregroundColor(.black)
+                        .foregroundColor(.primary)
                         .fontWeight(.bold)
                     Spacer()
                 }
@@ -86,7 +82,7 @@ struct PageContent: View {
                     Text("Later this day")
                         .padding(.leading)
                         .font(.title2)
-                        .foregroundColor(.black)
+                        .foregroundColor(.primary)
                         .fontWeight(.bold)
                     Spacer()
                     Button("View All"){
@@ -121,29 +117,32 @@ struct UpcomingCard: View {
                 RoundedRectangle(cornerRadius: 20)
                     .frame(width: 250, height: 250)
                     .shadow(radius: 5, x:0, y: 5)
-                    .foregroundColor(.black)
+                    .foregroundColor(.secondary)
                 
                 VStack(alignment: .leading){
                     Text("Mr. John Johnson")
                         .frame(width: 150, alignment: .leading)
-                        .foregroundColor(.white)
+                        .foregroundColor(Color(UIColor.systemBackground))
                         .font(.title)
                         .fontWeight(.heavy)
                     
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
+                            .fill(
+                                Color(UIColor.systemBackground).opacity(0.3)
+                            )
                             .frame(width: 200, height: 50)
-                            .foregroundColor(Color.white.opacity(0.3))
+                            
                             
                         
                         HStack{
                             Image(systemName: "list.clipboard")
-                                .foregroundColor(.white)
+                                .foregroundColor(Color(UIColor.systemBackground))
                                 .font(.title)
                             
                             Text("Explosive Diarrhea")
                                 .frame(width: 150,height: 40)
-                                .foregroundColor(.white)
+                                .foregroundColor(Color(UIColor.systemBackground))
                                 .fontWeight(.bold)
                                 .minimumScaleFactor(0.5)
                         }
@@ -151,17 +150,19 @@ struct UpcomingCard: View {
                     
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
+                            .fill(
+                                Color(UIColor.systemBackground).opacity(0.3)
+                            )
                             .frame(width: 200, height: 50)
-                            .foregroundColor(Color.white.opacity(0.3))
                         
                         HStack{
                             Image(systemName: "clock")
-                                .foregroundColor(.white)
+                                .foregroundColor(Color(UIColor.systemBackground))
                                 .font(.title)
                             
                             Text("10:30 AM")
+                                .foregroundColor(Color(UIColor.systemBackground))
                                 .frame(width: 150)
-                                .foregroundColor(.white)
                                 .fontWeight(.bold)
                         }
                     }
@@ -186,8 +187,12 @@ struct LaterThisDayCard: View {
                     .foregroundColor(Color.blue)
                     .shadow(radius: 5, y: 5)
                 RoundedRectangle(cornerRadius: 9)
+                    .fill(
+                        Color(UIColor.systemBackground)
+                    )
                     .frame(width: 347, height:73)
-                    .foregroundColor(Color.white)
+                    
+                    
                 HStack{
                     Image(systemName: "circle.fill")
                         .font(.title)
@@ -198,6 +203,7 @@ struct LaterThisDayCard: View {
                         Text("Mrs. Jane Doe")
                             .font(.title3)
                             .minimumScaleFactor(0.5)
+                            .foregroundColor(.primary)
                         HStack{
                             Text("21")
                                 .font(.subheadline)

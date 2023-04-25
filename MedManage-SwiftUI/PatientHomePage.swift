@@ -14,7 +14,7 @@ struct PatientHomePage: View {
         TabView{
             NavigationView{
                 PatientHomePageContent()
-                    .navigationBarTitle("Home")
+                    .navigationBarTitle("MedManage")
             }
             .tabItem{
                 Label("Home", systemImage: "house")
@@ -36,12 +36,22 @@ struct PatientHomePage: View {
 }
 
 struct PatientHomePageContent: View {
-
     var body: some View {
-        
         VStack{
             
-            OffersCard()
+            //Offers
+            TabView{
+                ForEach(0..<5) {index in
+                    OffersCard()
+                }
+            }
+            .tabViewStyle(.page)
+            .onAppear{
+                UIPageControl.appearance().currentPageIndicatorTintColor = .black
+                
+            }
+            
+            
             
             //Upcoming
             HStack{
@@ -64,10 +74,10 @@ struct PatientHomePageContent: View {
                 .padding(.top, -25)
                 .frame(height: 275)
             }
+            .padding(.top, -10)
             
             //Book Appointment Button
             Button("Book an Appointment"){
-                
             }
             .frame(width: 300, height: 50)
             .background(Color.blue)
@@ -75,7 +85,8 @@ struct PatientHomePageContent: View {
             .font(.title3)
             .cornerRadius(10)
             .fontWeight(.bold)
-            
+            .padding(.bottom, 20)
+            .shadow(radius: 5, y: 5)
         }
     }
 }
@@ -84,11 +95,14 @@ struct OffersCard: View {
     var body: some View {
         ZStack{
             Rectangle()
-                .frame(height: 250)
+                .frame(width: UIScreen.main.bounds.width, height: 230)
                 .foregroundColor(.gray)
             
+//            Image(systemName: "house")
+//                .frame(height: 230)
+            
             HStack{
-                VStack(alignment: .leading, spacing: 120){
+                VStack(alignment: .leading, spacing: 100){
                     Text("Get 40% off on your next lab report!")
                         .foregroundColor(.white)
                         .font(.title2)
@@ -159,7 +173,7 @@ struct UpcomingAppointmentCard: View {
                     
                     Text("Urologist")
                         .foregroundColor(.white)
-                        .padding(.leading,4)
+                        .padding(.leading,5)
                 }
             }
         }
@@ -171,3 +185,4 @@ struct PatientHomePage_Previews: PreviewProvider {
         PatientHomePage()
     }
 }
+
