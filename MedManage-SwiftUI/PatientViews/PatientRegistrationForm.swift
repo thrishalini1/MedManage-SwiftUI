@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+import FirebaseCore
+import FirebaseAuth
+import FirebaseFirestore
 
 struct PatientRegistrationForm: View {
     let currentDate = Date()
@@ -20,6 +23,9 @@ struct PatientRegistrationForm: View {
     @State private var gender = "Male"
     @State private var birthDate = Date.now
     @State private var bloodGroup = ""
+    @State private var reasonReg = ""
+    @State private var historyM = ""
+    
     let genderOptions = ["Male", "Female", "Other"]
     @FocusState private var fieldFocus: FocusedField?
     
@@ -72,27 +78,19 @@ struct PatientRegistrationForm: View {
                 }
             }
             Section("Medical History"){
-                TextField("Reason for Registration", text: $email)
-                    .keyboardType(.emailAddress)
-                    .focused($fieldFocus, equals: .email)
-                    .textContentType(.emailAddress)
+                TextField("Reason for Registration", text: $reasonReg)
+                    .keyboardType(.default)
+                    .focused($fieldFocus, equals: .reasonReg)
+                    .textContentType(.name)
                     .submitLabel(.next)
                 
-                TextField("History of Medication", text: $phoneNumber)
+                TextField("History of Medication", text: $historyM)
                     .keyboardType(.numberPad)
-                    .focused($fieldFocus, equals: .pNumber)
+                    .focused($fieldFocus, equals: .historyM)
                     .textContentType(.telephoneNumber)
             }
             Button(action: {
-                print("\(currentDate)")
-                print("\(fName)")
-                print("\(lName)")
-                print("\(email)")
-                print("\(phoneNumber)")
-                print("\(age)")
-                print("\(gender)")
-                print("\(birthDate)")
-                print("\(bloodGroup)")
+                register(fName: fName, lName: lName, email: email, pNumber: phoneNumber, age: age, gender: gender, birthDate: birthDate, bloodGroup: bloodGroup, reasonReg: reasonReg, historyM: historyM)
             }, label: {
                 Text("Register")
                     .frame(maxWidth: .infinity)
@@ -106,6 +104,48 @@ struct PatientRegistrationForm: View {
         .navigationBarTitle("Registration Form", displayMode: .inline)
     } //body
     
+    func register(fName: String, lName: String, email: String, pNumber: String, age: String, gender: String, birthDate: Date, bloodGroup: String, reasonReg: String, historyM: String) {
+        // Register the user with Firebase Authentication
+        Auth.auth().createUser(withEmail: email, password: pNumber) { (result, error) in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            
+            // User registration was successful, update their profile with additional data
+            let changeRequest = result?.user.createProfileChangeRequest()
+            changeRequest?.displayName = "\(fName) \(lName)"
+            changeRequest?.commitChanges(completion: { (error) in
+                if let error = error {
+                    print(error.localizedDescription)
+                    return
+                }
+                // Update the user's profile with additional data
+                let db = Firestore.firestore()
+                let userRef = db.collection("users").document(result!.user.uid)
+                let userData: [String: Any] = [
+                    "fName":fName,
+                    "lName":lName,
+                    "email":email,
+                    "phoneNumber":pNumber,
+                    "age": age,
+                    "bloodGroup": bloodGroup,
+                    "gender": gender,
+                    "birthDate": birthDate,
+                    "reasonReg": reasonReg,
+                    "historyM": historyM
+                ]
+                userRef.setData(userData, merge: true) { error in
+                    if let error = error {
+                        print(error.localizedDescription)
+                        return
+                    }
+                    print("User registered successfully")
+                }
+            })
+        }
+    }
+
     func switchField(currentField: FocusedField){
         switch currentField {
         case .fName:

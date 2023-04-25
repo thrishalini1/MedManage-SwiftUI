@@ -6,16 +6,22 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 
 struct LoginScreen: View {
-    
-    @State var username: String = ""
-    @State private var password: String = ""
+    @State var email: String = ""
+    @State private var pNumber: String = ""
     @State private var isPasswordHidden = true
-    
-    
+    @State private var userIsLogedIn = false
     var body: some View {
+        if userIsLogedIn{
+            
+        }else{
+            content
+        }
+    }
+    var content: some View{
         ZStack {
             Color.white.ignoresSafeArea()
             VStack {
@@ -41,10 +47,9 @@ struct LoginScreen: View {
                         .fontWeight(.semibold)
                         .padding(.bottom, -15)
                     VStack {
-                        TextField("Username", text: $username)
+                        TextField("Email", text: $email)
                             .frame(width: 230, height: 50)
                             .padding(.bottom, -20)
-                            .submitLabel(.next)
                         
                         Divider()
                             .frame(width: 230)
@@ -61,12 +66,11 @@ struct LoginScreen: View {
                     
                     VStack {
                         if isPasswordHidden {
-                            SecureField("Password", text: $password)
+                            SecureField("Password", text: $pNumber)
                                 .frame(width: 230, height: 50)
                                 .padding(.bottom, -20)
-                                .submitLabel(.next)
                         } else {
-                            TextField("Password", text: $password)
+                            TextField("Password", text: $pNumber)
                                 .frame(width: 230, height: 50)
                                 .padding(.bottom, -20)
                                 .submitLabel(.next)
@@ -89,11 +93,9 @@ struct LoginScreen: View {
                 }
                 .padding(.bottom, 50)
                 //Navigation Link
-                Button {
-                    print("\(username)")
-                    print("\(password)")
-                }
-            label: {
+                Button (action: {
+                    login()
+                }){
                 Text("Log in")
                     .foregroundColor(.white)
                     .background {
@@ -102,6 +104,7 @@ struct LoginScreen: View {
                         
                     }
             }
+                
                 HStack {
                     Text("New to MedMange?")
                         .font(.system(size: 14))
@@ -118,9 +121,24 @@ struct LoginScreen: View {
                 .padding(.top,10)
                 Spacer()
             }
+            .onAppear {
+                            Auth.auth().addStateDidChangeListener { auth, user in
+                                if user != nil {
+                                    userIsLogedIn = true
+                                }
+                            }
+                        }
         }
-//        .navigationBarHidden(true)
     }
+    func login() {
+           Auth.auth().signIn(withEmail: email, password: pNumber) { (result, error) in
+               if error != nil {
+                   print(error?.localizedDescription ?? "")
+               } else {
+                   print("login successfully")
+               }
+           }
+       } 
 }
 struct LoginScreen_Previews: PreviewProvider {
     static var previews: some View {

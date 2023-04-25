@@ -7,5 +7,7 @@ target 'MedManage-SwiftUI' do
 
   # Pods for MedManage-SwiftUI
 	pod 'FirebaseAuth'
+	pod 'Firebase'
+	pod 'FirebaseFirestore'
 
 end
