@@ -12,6 +12,14 @@
 		05C7527129F69860004D3FE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05C7527029F69860004D3FE0 /* Assets.xcassets */; };
 		05C7527429F69860004D3FE0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05C7527329F69860004D3FE0 /* Preview Assets.xcassets */; };
 		95DC2421A9CB3220637B6611 /* Pods_MedManage_SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0706AA6F216E9044646314BC /* Pods_MedManage_SwiftUI.framework */; };
+		9CEF420D29F7DCAA004DF9E9 /* PatientExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEF420C29F7DCAA004DF9E9 /* PatientExtensions.swift */; };
+		9CEF421129F7DCEB004DF9E9 /* PatientData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEF421029F7DCEB004DF9E9 /* PatientData.swift */; };
+		9CEF421329F7DD0C004DF9E9 /* DoctorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEF421229F7DD0C004DF9E9 /* DoctorData.swift */; };
+		9CEF421929F7DD52004DF9E9 /* DoctorProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEF421829F7DD52004DF9E9 /* DoctorProfileModel.swift */; };
+		9CEF421B29F7DD78004DF9E9 /* AppointmentsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEF421A29F7DD78004DF9E9 /* AppointmentsModel.swift */; };
+		9CEF421D29F7DD8E004DF9E9 /* PatientProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEF421C29F7DD8E004DF9E9 /* PatientProfileModel.swift */; };
+		9CEF422029F7DDB4004DF9E9 /* PatientHomeScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEF421F29F7DDB4004DF9E9 /* PatientHomeScreenModel.swift */; };
+		9CEF422229F7DDD6004DF9E9 /* ToAppointPatientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEF422129F7DDD6004DF9E9 /* ToAppointPatientModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +30,14 @@
 		05C7527329F69860004D3FE0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0706AA6F216E9044646314BC /* Pods_MedManage_SwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedManage_SwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873944B3356E20FDD63140A3 /* Pods-MedManage-SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedManage-SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-MedManage-SwiftUI/Pods-MedManage-SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
+		9CEF420C29F7DCAA004DF9E9 /* PatientExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientExtensions.swift; sourceTree = "<group>"; };
+		9CEF421029F7DCEB004DF9E9 /* PatientData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientData.swift; sourceTree = "<group>"; };
+		9CEF421229F7DD0C004DF9E9 /* DoctorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorData.swift; sourceTree = "<group>"; };
+		9CEF421829F7DD52004DF9E9 /* DoctorProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorProfileModel.swift; sourceTree = "<group>"; };
+		9CEF421A29F7DD78004DF9E9 /* AppointmentsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentsModel.swift; sourceTree = "<group>"; };
+		9CEF421C29F7DD8E004DF9E9 /* PatientProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientProfileModel.swift; sourceTree = "<group>"; };
+		9CEF421F29F7DDB4004DF9E9 /* PatientHomeScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientHomeScreenModel.swift; sourceTree = "<group>"; };
+		9CEF422129F7DDD6004DF9E9 /* ToAppointPatientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToAppointPatientModel.swift; sourceTree = "<group>"; };
 		F73A72B23A99F708AAE4987A /* Pods-MedManage-SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedManage-SwiftUI.release.xcconfig"; path = "Target Support Files/Pods-MedManage-SwiftUI/Pods-MedManage-SwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,6 +74,7 @@
 		05C7526B29F69860004D3FE0 /* MedManage-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				9CEF420B29F7DC94004DF9E9 /* DataModel */,
 				05C7526C29F69860004D3FE0 /* MedManage_SwiftUIApp.swift */,
 				05C7526E29F69860004D3FE0 /* ContentView.swift */,
 				05C7527029F69860004D3FE0 /* Assets.xcassets */,
@@ -82,13 +99,75 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9CEF420B29F7DC94004DF9E9 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				9CEF421429F7DD27004DF9E9 /* Models */,
+				9CEF420F29F7DCDA004DF9E9 /* Data */,
+				9CEF420E29F7DCCC004DF9E9 /* Extensions */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		9CEF420E29F7DCCC004DF9E9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9CEF420C29F7DCAA004DF9E9 /* PatientExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9CEF420F29F7DCDA004DF9E9 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9CEF421029F7DCEB004DF9E9 /* PatientData.swift */,
+				9CEF421229F7DD0C004DF9E9 /* DoctorData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		9CEF421429F7DD27004DF9E9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9CEF421529F7DD2E004DF9E9 /* Doctors */,
+				9CEF421629F7DD37004DF9E9 /* Appointments */,
+				9CEF421729F7DD3E004DF9E9 /* Patients */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9CEF421529F7DD2E004DF9E9 /* Doctors */ = {
+			isa = PBXGroup;
+			children = (
+				9CEF421829F7DD52004DF9E9 /* DoctorProfileModel.swift */,
+			);
+			path = Doctors;
+			sourceTree = "<group>";
+		};
+		9CEF421629F7DD37004DF9E9 /* Appointments */ = {
+			isa = PBXGroup;
+			children = (
+				9CEF421A29F7DD78004DF9E9 /* AppointmentsModel.swift */,
+			);
+			path = Appointments;
+			sourceTree = "<group>";
+		};
+		9CEF421729F7DD3E004DF9E9 /* Patients */ = {
+			isa = PBXGroup;
+			children = (
+				9CEF421C29F7DD8E004DF9E9 /* PatientProfileModel.swift */,
+				9CEF421F29F7DDB4004DF9E9 /* PatientHomeScreenModel.swift */,
+				9CEF422129F7DDD6004DF9E9 /* ToAppointPatientModel.swift */,
+			);
+			path = Patients;
+			sourceTree = "<group>";
+		};
 		C582B5A9B7B40585DEAB6F62 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				873944B3356E20FDD63140A3 /* Pods-MedManage-SwiftUI.debug.xcconfig */,
 				F73A72B23A99F708AAE4987A /* Pods-MedManage-SwiftUI.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -207,7 +286,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				05C7526F29F69860004D3FE0 /* ContentView.swift in Sources */,
+				9CEF421B29F7DD78004DF9E9 /* AppointmentsModel.swift in Sources */,
+				9CEF421329F7DD0C004DF9E9 /* DoctorData.swift in Sources */,
+				9CEF421D29F7DD8E004DF9E9 /* PatientProfileModel.swift in Sources */,
+				9CEF420D29F7DCAA004DF9E9 /* PatientExtensions.swift in Sources */,
 				05C7526D29F69860004D3FE0 /* MedManage_SwiftUIApp.swift in Sources */,
+				9CEF421929F7DD52004DF9E9 /* DoctorProfileModel.swift in Sources */,
+				9CEF422029F7DDB4004DF9E9 /* PatientHomeScreenModel.swift in Sources */,
+				9CEF422229F7DDD6004DF9E9 /* ToAppointPatientModel.swift in Sources */,
+				9CEF421129F7DCEB004DF9E9 /* PatientData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
