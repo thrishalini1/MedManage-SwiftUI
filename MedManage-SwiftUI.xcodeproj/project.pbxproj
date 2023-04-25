@@ -13,6 +13,12 @@
 		05C7527429F69860004D3FE0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05C7527329F69860004D3FE0 /* Preview Assets.xcassets */; };
 		95DC2421A9CB3220637B6611 /* Pods_MedManage_SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0706AA6F216E9044646314BC /* Pods_MedManage_SwiftUI.framework */; };
 		A9D48F9129F7ACD500CD59FF /* AppointmentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D48F9029F7ACD500CD59FF /* AppointmentDetailView.swift */; };
+		A9D48F9329F7AD3D00CD59FF /* DateAndTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D48F9229F7AD3D00CD59FF /* DateAndTimeView.swift */; };
+		A9D48F9529F7AD6900CD59FF /* afternoonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D48F9429F7AD6900CD59FF /* afternoonView.swift */; };
+		A9D48F9729F7AD8900CD59FF /* morningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D48F9629F7AD8900CD59FF /* morningView.swift */; };
+		A9D48F9929F7ADAB00CD59FF /* eveningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D48F9829F7ADAB00CD59FF /* eveningView.swift */; };
+		A9D48F9B29F7ADDA00CD59FF /* BillingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D48F9A29F7ADDA00CD59FF /* BillingView.swift */; };
+		A9D48F9F29F7AE4700CD59FF /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D48F9E29F7AE4700CD59FF /* SwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		0706AA6F216E9044646314BC /* Pods_MedManage_SwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedManage_SwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873944B3356E20FDD63140A3 /* Pods-MedManage-SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedManage-SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-MedManage-SwiftUI/Pods-MedManage-SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		A9D48F9029F7ACD500CD59FF /* AppointmentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentDetailView.swift; sourceTree = "<group>"; };
+		A9D48F9229F7AD3D00CD59FF /* DateAndTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateAndTimeView.swift; sourceTree = "<group>"; };
+		A9D48F9429F7AD6900CD59FF /* afternoonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = afternoonView.swift; sourceTree = "<group>"; };
+		A9D48F9629F7AD8900CD59FF /* morningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = morningView.swift; sourceTree = "<group>"; };
+		A9D48F9829F7ADAB00CD59FF /* eveningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eveningView.swift; sourceTree = "<group>"; };
+		A9D48F9A29F7ADDA00CD59FF /* BillingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingView.swift; sourceTree = "<group>"; };
+		A9D48F9E29F7AE4700CD59FF /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		F73A72B23A99F708AAE4987A /* Pods-MedManage-SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedManage-SwiftUI.release.xcconfig"; path = "Target Support Files/Pods-MedManage-SwiftUI/Pods-MedManage-SwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +75,12 @@
 				05C7526C29F69860004D3FE0 /* MedManage_SwiftUIApp.swift */,
 				05C7526E29F69860004D3FE0 /* ContentView.swift */,
 				A9D48F9029F7ACD500CD59FF /* AppointmentDetailView.swift */,
+				A9D48F9229F7AD3D00CD59FF /* DateAndTimeView.swift */,
+				A9D48F9429F7AD6900CD59FF /* afternoonView.swift */,
+				A9D48F9629F7AD8900CD59FF /* morningView.swift */,
+				A9D48F9829F7ADAB00CD59FF /* eveningView.swift */,
+				A9D48F9A29F7ADDA00CD59FF /* BillingView.swift */,
+				A9D48F9E29F7AE4700CD59FF /* SwiftUIView.swift */,
 				05C7527029F69860004D3FE0 /* Assets.xcassets */,
 				05C7527229F69860004D3FE0 /* Preview Content */,
 			);
@@ -208,9 +226,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9D48F9B29F7ADDA00CD59FF /* BillingView.swift in Sources */,
 				05C7526F29F69860004D3FE0 /* ContentView.swift in Sources */,
+				A9D48F9F29F7AE4700CD59FF /* SwiftUIView.swift in Sources */,
+				A9D48F9729F7AD8900CD59FF /* morningView.swift in Sources */,
+				A9D48F9929F7ADAB00CD59FF /* eveningView.swift in Sources */,
+				A9D48F9529F7AD6900CD59FF /* afternoonView.swift in Sources */,
 				05C7526D29F69860004D3FE0 /* MedManage_SwiftUIApp.swift in Sources */,
 				A9D48F9129F7ACD500CD59FF /* AppointmentDetailView.swift in Sources */,
+				A9D48F9329F7AD3D00CD59FF /* DateAndTimeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
