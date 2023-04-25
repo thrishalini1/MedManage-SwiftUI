@@ -19,6 +19,7 @@
 		A9D48F9929F7ADAB00CD59FF /* eveningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D48F9829F7ADAB00CD59FF /* eveningView.swift */; };
 		A9D48F9B29F7ADDA00CD59FF /* BillingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D48F9A29F7ADDA00CD59FF /* BillingView.swift */; };
 		A9D48F9F29F7AE4700CD59FF /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D48F9E29F7AE4700CD59FF /* SwiftUIView.swift */; };
+		A9D48FA129F7B21100CD59FF /* SpecialtiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D48FA029F7B21100CD59FF /* SpecialtiesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		A9D48F9829F7ADAB00CD59FF /* eveningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eveningView.swift; sourceTree = "<group>"; };
 		A9D48F9A29F7ADDA00CD59FF /* BillingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingView.swift; sourceTree = "<group>"; };
 		A9D48F9E29F7AE4700CD59FF /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		A9D48FA029F7B21100CD59FF /* SpecialtiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialtiesView.swift; sourceTree = "<group>"; };
 		F73A72B23A99F708AAE4987A /* Pods-MedManage-SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedManage-SwiftUI.release.xcconfig"; path = "Target Support Files/Pods-MedManage-SwiftUI/Pods-MedManage-SwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +82,7 @@
 				A9D48F9629F7AD8900CD59FF /* morningView.swift */,
 				A9D48F9829F7ADAB00CD59FF /* eveningView.swift */,
 				A9D48F9A29F7ADDA00CD59FF /* BillingView.swift */,
+				A9D48FA029F7B21100CD59FF /* SpecialtiesView.swift */,
 				A9D48F9E29F7AE4700CD59FF /* SwiftUIView.swift */,
 				05C7527029F69860004D3FE0 /* Assets.xcassets */,
 				05C7527229F69860004D3FE0 /* Preview Content */,
@@ -229,6 +232,7 @@
 				A9D48F9B29F7ADDA00CD59FF /* BillingView.swift in Sources */,
 				05C7526F29F69860004D3FE0 /* ContentView.swift in Sources */,
 				A9D48F9F29F7AE4700CD59FF /* SwiftUIView.swift in Sources */,
+				A9D48FA129F7B21100CD59FF /* SpecialtiesView.swift in Sources */,
 				A9D48F9729F7AD8900CD59FF /* morningView.swift in Sources */,
 				A9D48F9929F7ADAB00CD59FF /* eveningView.swift in Sources */,
 				A9D48F9529F7AD6900CD59FF /* afternoonView.swift in Sources */,
