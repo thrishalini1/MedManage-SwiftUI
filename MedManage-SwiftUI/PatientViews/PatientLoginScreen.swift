@@ -81,7 +81,7 @@ struct PatientLoginScreen: View {
                         isPasswordHidden.toggle()
                     }) {
                         Image(systemName: isPasswordHidden ? "eye.slash" : "eye")
-                            .foregroundColor(.black)
+                            .foregroundColor(.primary)
                     }
                     .buttonStyle(BorderlessButtonStyle()) // to remove the button border
                     
