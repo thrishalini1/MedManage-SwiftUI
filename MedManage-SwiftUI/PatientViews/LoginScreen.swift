@@ -12,6 +12,7 @@ struct LoginScreen: View {
     
     @State var username: String = ""
     @State private var password: String = ""
+    @State private var isPasswordHidden = true
     
     
     var body: some View {
@@ -43,33 +44,54 @@ struct LoginScreen: View {
                         TextField("Username", text: $username)
                             .frame(width: 230, height: 50)
                             .padding(.bottom, -20)
+                            .submitLabel(.next)
+                        
                         Divider()
                             .frame(width: 230)
                             .overlay(.black)
-                        
                     }
                 }
-                //                .padding(.leading, 20)
+                .padding(.leading, -30)
+                .padding(.bottom, 15)
                 HStack {
                     Image("passwordLock")
                         .font(.system(size: 25))
                         .fontWeight(.semibold)
                         .padding(.bottom, -15)
-                    VStack{
-                        SecureField("Password", text: $password)
-                            .frame(width: 230, height: 50)
-                            .padding(.bottom, -20)
+                    
+                    VStack {
+                        if isPasswordHidden {
+                            SecureField("Password", text: $password)
+                                .frame(width: 230, height: 50)
+                                .padding(.bottom, -20)
+                                .submitLabel(.next)
+                        } else {
+                            TextField("Password", text: $password)
+                                .frame(width: 230, height: 50)
+                                .padding(.bottom, -20)
+                                .submitLabel(.next)
+                                
+                        }
                         Divider()
                             .frame(width: 230)
                             .overlay(.black)
                     }
+                    Button(action: {
+                        isPasswordHidden.toggle()
+                    }) {
+                        Image(systemName: isPasswordHidden ? "eye.slash" : "eye")
+                            .foregroundColor(.black)
+                    }
+                    .buttonStyle(BorderlessButtonStyle()) // to remove the button border
                     
+                }.onAppear() {
+                    isPasswordHidden = true
                 }
-                //                .padding(.leading)
                 .padding(.bottom, 50)
                 //Navigation Link
                 Button {
-                    
+                    print("\(username)")
+                    print("\(password)")
                 }
             label: {
                 Text("Log in")
@@ -80,7 +102,6 @@ struct LoginScreen: View {
                         
                     }
             }
-                
                 HStack {
                     Text("New to MedMange?")
                         .font(.system(size: 14))
@@ -94,7 +115,7 @@ struct LoginScreen: View {
                         
                     }
                 }
-                .padding(.top,50)
+                .padding(.top,10)
                 Spacer()
             }
         }
