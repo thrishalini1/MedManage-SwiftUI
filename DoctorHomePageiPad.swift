@@ -16,6 +16,7 @@ struct DoctorHomePageiPad: View {
             
             iPadNavBarContent()
                 .navigationTitle("Appointments")
+                
             
 //            VStack{
 //                iPadUserDetails()
@@ -29,9 +30,17 @@ struct DoctorHomePageiPad: View {
 //                Spacer()
 //            }
             ScrollView {
-                Color(UIColor.systemBackground).ignoresSafeArea()
+                //Color(UIColor.systemBackground).ignoresSafeArea()
                 LazyVStack(pinnedViews: .sectionHeaders){
-                    Section(header: iPadUserDetails()){
+                    Section{
+                        Text("")
+                        .toolbar{
+                            ToolbarItem(placement: .navigation){
+                                iPadUserDetails()
+                            }
+                        }
+                    }
+                    Section(){
                         
                         
                         AppointmentDetailCard()
@@ -42,7 +51,7 @@ struct DoctorHomePageiPad: View {
                 }
             }
         }
-        .navigationViewStyle(.columns)
+        
     }
 }
 
@@ -199,41 +208,31 @@ struct iPadNavBarContent: View{
 
 struct iPadUserDetails: View {
     var body: some View {
-        VStack(spacing:0){
-            ZStack{
-                Rectangle()
-                    .foregroundColor(Color(UIColor.systemBackground))
-                    .frame(height: 80)
-                
-                HStack(){
-                    Text("Dr. Barry Allen")
-                        .font(.title)
-                        .fontWeight(.heavy)
-                        .frame(width: 250)
-                        .foregroundColor(.blue)
-                    
-                    Text("Urologist")
-                        .font(.title3)
-                    
-                    Spacer()
-                    
-                    Text("Patient Visits for Day: 30")
-                        .foregroundColor(Color(UIColor.systemBackground))
-                        .padding(.leading)
-                        .padding(.trailing)
-                        .frame(height: 50)
-                        .background(Color.blue)
-                        .cornerRadius(10)
-                        .fontWeight(.bold)
-                        .font(.title2)
-                        .padding(.trailing)
-                }
-            }
-            Divider()
+        HStack(spacing: 40){
+            Text("Dr. Barry Allen")
+                .font(.title)
+                .fontWeight(.heavy)
+                .frame(width: 250)
+                .foregroundColor(.blue)
+            
+            Spacer()
+            
+            Text("Urologist")
+                .font(.title3)
+            
+            Spacer()
+            
+            Text("Patient Visits for Day: 30")
+                .foregroundColor(Color(UIColor.systemBackground))
+                .padding(.leading)
+                .padding(.trailing)
+                .frame(height: 40)
+                .background(Color.blue)
+                .cornerRadius(10)
+                .fontWeight(.bold)
+                .font(.title2)
+                .minimumScaleFactor(0.7)
         }
-        
-        
-       
     }
 }
 
@@ -414,7 +413,7 @@ struct AppointmentDetailCard: View {
                 
                 Spacer()
                 
-                VStack(spacing:30){
+                VStack(alignment:.leading, spacing:30){
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
                             .frame(width: 200, height: 75)
@@ -445,7 +444,7 @@ struct AppointmentDetailCard: View {
                             Text("10:30 AM")
                                 .foregroundColor(Color(UIColor.systemBackground))
                                 .fontWeight(.bold)
-                            
+                                .frame(width: 120)
                         }
                     }
                 }
