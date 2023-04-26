@@ -10,12 +10,12 @@ import SwiftUI
 struct AppointmentDetailView: View {
     var body: some View {
         ZStack{
-            Color.white.ignoresSafeArea()
+            Color(UIColor.systemBackground).ignoresSafeArea()
             VStack{
                 HStack{
                     Text("April,21")
                         .font(.system(size: 30))
-                        .foregroundColor(.black)
+                        .foregroundColor(.primary)
                         .fontWeight(.bold)
                         .frame(maxWidth: .infinity,  alignment: .leading)
                         .padding(.leading)
@@ -50,10 +50,12 @@ struct AppointmentDetailView: View {
                         }
                         HStack{
                             Text("Urologist")
+                                .foregroundColor(.primary)
                             Spacer()
                         }
                         HStack{
                             Text("15+ Years")
+                                .foregroundColor(.primary)
                             Spacer()
                         }
                     }
@@ -64,10 +66,12 @@ struct AppointmentDetailView: View {
                 .padding(.bottom)
                 HStack{
                     Text("Designated Room: ")
+                        .foregroundColor(.primary)
                         .font(.system(size: 20))
                         .foregroundColor(.black)
                         .fontWeight(.bold)
                     Text("B-293")
+                        .foregroundColor(.primary)
                         .font(.system(size: 20))
                         .foregroundColor(.black)
                     Spacer()
@@ -77,12 +81,12 @@ struct AppointmentDetailView: View {
                 
                 HStack{
                     Text("Time Slot: ")
+                        .foregroundColor(.primary)
                         .font(.system(size: 20))
-                        .foregroundColor(.black)
                         .fontWeight(.bold)
                     Text("5:00-6:00 PM")
+                        .foregroundColor(.primary)
                         .font(.system(size: 20))
-                        .foregroundColor(.black)
                     Spacer()
                 }
                 .padding(.leading)
