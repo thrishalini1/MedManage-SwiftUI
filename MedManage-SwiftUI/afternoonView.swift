@@ -16,7 +16,7 @@ struct afternoonView: View {
     @State var selectedButton : Int = -1
     var body: some View {
         ZStack{
-            Color.white.ignoresSafeArea()
+            Color(UIColor.systemBackground).ignoresSafeArea()
             VStack{
                 LazyVGrid(
                     columns: columns,
@@ -29,38 +29,38 @@ struct afternoonView: View {
                             }
                         label:{
                             RoundedRectangle(cornerRadius: 6)
-                                .fill(selectedButton == index ? .blue : .white)
+                                .fill(selectedButton == index ? .blue : Color("ColorSet5"))
                                 .frame(width: 100, height: 40)
                                 .overlay {
                                     switch(index){
                                     case 0:
                                         Text("12:00 PM")
-                                            .foregroundColor(selectedButton == index ? .white : .black)
+                                            .foregroundColor(selectedButton == index ? .white : Color(UIColor.label))
 
                                     case 1:
                                         Text("12:30 AM")
-                                            .foregroundColor(selectedButton == index ? .white : .black)
+                                            .foregroundColor(selectedButton == index ? .white : Color(UIColor.label))
                                     case 2:
                                         Text("1:00 PM")
-                                            .foregroundColor(selectedButton == index ? .white : .black)
+                                            .foregroundColor(selectedButton == index ? .white : Color(UIColor.label))
                                     case 3:
                                         Text("1:30 PM")
-                                            .foregroundColor(selectedButton == index ? .white : .black)
+                                            .foregroundColor(selectedButton == index ? .white : Color(UIColor.label))
                                     case 4:
                                         Text("2:00 PM")
-                                            .foregroundColor(selectedButton == index ? .white : .black)
+                                            .foregroundColor(selectedButton == index ? .white : Color(UIColor.label))
                                     case 5:
                                         Text("2:30 PM")
-                                            .foregroundColor(selectedButton == index ? .white : .black)
+                                            .foregroundColor(selectedButton == index ? .white : Color(UIColor.label))
                                     default:
                                         Text("NIL")
                                             .foregroundColor(.white)
 
                                     }
                                 }
-                                .shadow(color: Color.black.opacity(0.4), radius: 10, x: 10, y: 10)
-                                .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
-                            
+                                .shadow(color: Color(UIColor.label).opacity(0.4), radius: 10, x: 10, y: 10)
+                                .shadow(color: Color(UIColor.systemBackground).opacity(0.7), radius: 10, x: -5, y: -5)
+
                         }
                             
                         }
