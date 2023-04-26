@@ -22,9 +22,9 @@ struct DaysView: View {
                     .padding(.trailing,40)
                     
                 RoundedRectangle(cornerRadius: 8)
-                    .strokeBorder(.black,lineWidth: 3)
+                    .strokeBorder(.primary,lineWidth: 3)
                     .frame(width: 120, height: 50)
-                    .shadow(color: .black, radius: 1)
+                    .shadow(color: .primary, radius: 1)
                     .overlay(content: {
                         Text("\(days, specifier: "%.0f") Days")
                             .font(.system(size: 25))

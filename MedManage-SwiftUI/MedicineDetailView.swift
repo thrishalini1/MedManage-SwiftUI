@@ -17,6 +17,7 @@ struct MedicineDetailView: View {
                         .frame(maxWidth: .infinity,alignment: .leading)
                         .padding(.leading)
                     Text("Dolo (Paracetamol) 650mg")
+                        .foregroundColor(.primary)
                         .font(.system(size: 40))
                         .fontWeight(.bold)
                         .frame(maxWidth: .infinity,alignment: .leading)
@@ -24,7 +25,7 @@ struct MedicineDetailView: View {
                     
                     Divider()
                         .frame(height: 3)
-                        .background(.black)
+                        .background(.primary)
                         .padding(.leading,50)
                         .padding(.trailing,300)
                         .padding(.bottom)
@@ -34,14 +35,17 @@ struct MedicineDetailView: View {
                     HStack{
                         Text("Contains")
                             .font(.title2)
+                            .foregroundColor(.primary)
                         Spacer()
                         Text("Paracetamol / Acetaminophen(650.0 Mg)")
                             .font(.title2)
+                            .foregroundColor(.primary)
                     }
                     .padding(.leading,70)
                     .padding(.trailing,300)
                     .padding(.bottom)
                     Divider()
+                        .foregroundColor(.primary)
                         .frame(height: 1)
                         .background(.gray)
                         .padding(.leading,70)
@@ -52,9 +56,11 @@ struct MedicineDetailView: View {
                     HStack{
                         Text("Uses")
                             .font(.title2)
+                            .foregroundColor(.primary)
                         Spacer()
                         Text("Pain and Fever")
                             .font(.title2)
+                            .foregroundColor(.primary)
                         Spacer()
                     }
                     .padding(.leading,70)
@@ -62,6 +68,7 @@ struct MedicineDetailView: View {
                     .padding(.trailing,300)
                     .padding(.bottom)
                     Divider()
+                        .foregroundColor(.primary)
                         .frame(height: 1)
                         .background(.gray)
                         .padding(.leading,70)
@@ -71,9 +78,11 @@ struct MedicineDetailView: View {
                 Group {
                     HStack{
                         Text("Side Effects")
+                            .foregroundColor(.primary)
                             .font(.title2)
                         Spacer()
                         Text("Skin rash, itching, blistering")
+                            .foregroundColor(.primary)
                             .font(.title2)
                         Spacer()
                     }
@@ -82,6 +91,7 @@ struct MedicineDetailView: View {
                     .padding(.trailing,300)
                     .padding(.bottom)
                     Divider()
+                        .foregroundColor(.primary)
                         .frame(height: 1)
                         .background(.gray)
                         .padding(.leading,70)
@@ -92,9 +102,13 @@ struct MedicineDetailView: View {
                     HStack{
                         Text("Therapy")
                             .font(.title2)
+                            .foregroundColor(.primary)
+
                         Spacer()
                         Text("ANALGESIC/ANTIPYRETIC")
                             .font(.title2)
+                            .foregroundColor(.primary)
+
                         Spacer()
                     }
                     .padding(.leading,70)
@@ -103,6 +117,7 @@ struct MedicineDetailView: View {
                     .padding(.bottom)
                     
                     Divider()
+                        .foregroundColor(.primary)
                         .frame(height: 1)
                         .background(.gray)
                         .padding(.leading,70)

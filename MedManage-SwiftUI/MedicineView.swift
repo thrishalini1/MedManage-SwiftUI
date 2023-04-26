@@ -15,6 +15,7 @@ struct TimeDetails {
 }
 
 struct MedicineView: View {
+    @Environment(\.colorScheme) var colorScheme
     @State var days: Double = 30
     @State var selected1: Int = -1
     @State var selected2: Int = -1
@@ -31,7 +32,7 @@ struct MedicineView: View {
     @State var selectedButton : Int = 0
     var body: some View {
         ZStack{
-            Color.white.ignoresSafeArea()
+            Color(UIColor.systemBackground).ignoresSafeArea()
             VStack{
                 MedicineDetailView()
                 DaysView()
@@ -46,11 +47,11 @@ struct MedicineView: View {
                     HStack{
                       
                         RoundedRectangle(cornerRadius: 10)
-                            .fill(.black)
+                            .fill(colorScheme == .light ? .black : .secondary)
                             .frame(width: 130, height: 50)
                             .overlay {
                                 Text("Afternoon")
-                                    .foregroundColor(.white)
+                                    .foregroundColor(Color(UIColor.systemBackground))
                             }
                         Spacer()
                         ForEach(0..<when.count){i in
@@ -71,7 +72,7 @@ struct MedicineView: View {
                                         }
                                     Text("\(when[i])")
                                         .font(.title2)
-                                        .foregroundColor(.black)
+                                        .foregroundColor(.primary)
                                         .fontWeight(.semibold)
                                 }
                             }
@@ -87,17 +88,17 @@ struct MedicineView: View {
                             VStack(spacing: 5){
                                 HStack{
                                     Text(value2.isEmpty ? placeholder : value2)
-                                        .foregroundColor(value2.isEmpty ? .gray : .black)
+                                        .foregroundColor(value2.isEmpty ? .secondary : .primary)
                                     Spacer()
                                     Image(systemName: "chevron.down")
-                                        .foregroundColor(Color.black)
+                                        .foregroundColor(Color.primary)
                                         .font(Font.system(size: 20, weight: .bold))
                                 }
                                 .padding(.leading)
                                 .padding(.horizontal)
                                 .background(
                                     RoundedRectangle(cornerRadius: 5)
-                                        .strokeBorder(.black,lineWidth: 4)
+                                        .strokeBorder(.primary,lineWidth: 4)
                                         .frame(width: 100, height: 50)
                                 )
                             }
@@ -111,11 +112,11 @@ struct MedicineView: View {
                     
                     HStack{
                         RoundedRectangle(cornerRadius: 10)
-                            .fill(.black)
+                            .fill(colorScheme == .light ? .black : .secondary)
                             .frame(width: 130, height: 50)
                             .overlay {
                                 Text("Evening")
-                                    .foregroundColor(.white)
+                                    .foregroundColor(Color(UIColor.systemBackground))
                             }
                         Spacer()
                         ForEach(0..<when.count){i in
@@ -136,7 +137,7 @@ struct MedicineView: View {
                                         }
                                     Text("\(when[i])")
                                         .font(.title2)
-                                        .foregroundColor(.black)
+                                        .foregroundColor(.primary)
                                         .fontWeight(.semibold)
                                 }
                                 
@@ -154,17 +155,17 @@ struct MedicineView: View {
                             VStack(spacing: 5){
                                 HStack{
                                     Text(value3.isEmpty ? placeholder : value3)
-                                        .foregroundColor(value3.isEmpty ? .gray : .black)
+                                        .foregroundColor(value3.isEmpty ? .secondary : .primary)
                                     Spacer()
                                     Image(systemName: "chevron.down")
-                                        .foregroundColor(Color.black)
+                                        .foregroundColor(Color.primary)
                                         .font(Font.system(size: 20, weight: .bold))
                                 }
                                 .padding(.leading)
                                 .padding(.horizontal)
                                 .background(
                                     RoundedRectangle(cornerRadius: 5)
-                                        .strokeBorder(.black,lineWidth: 4)
+                                        .strokeBorder(.primary,lineWidth: 4)
                                         .frame(width: 100, height: 50)
                                 )
                             }
@@ -186,7 +187,7 @@ struct MedicineView: View {
                     .fontWeight(.bold)
                     .background{
                         RoundedRectangle(cornerRadius: 5)
-                            .fill(Color(.black))
+                            .fill(.primary)
                             .frame(width: 350, height: 50)
                             .shadow(radius: 3, x: 2, y: 5)
                     }

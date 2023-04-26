@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct morningOptionView: View {
+    @Environment(\.colorScheme) var colorScheme
     let when = ["Before Meal","After Meal"]
     @State var selected1: Int = -1
     @State var selected2: Int = -1
@@ -21,11 +22,11 @@ struct morningOptionView: View {
     var body: some View {
         HStack{
             RoundedRectangle(cornerRadius: 10)
-                .fill(.black)
+                .fill(colorScheme == .light ? .black : .secondary)
                 .frame(width: 130, height: 50)
                 .overlay {
                     Text("Morning")
-                        .foregroundColor(.white)
+                        .foregroundColor(Color(UIColor.systemBackground))
                 }
             Spacer()
             ForEach(0..<when.count){i in
@@ -46,7 +47,7 @@ struct morningOptionView: View {
                             }
                         Text("\(when[i])")
                             .font(.title2)
-                            .foregroundColor(.black)
+                            .foregroundColor(.primary)
                             .fontWeight(.semibold)
                     }
                 }
@@ -62,17 +63,17 @@ struct morningOptionView: View {
                 VStack(spacing: 5){
                     HStack{
                         Text(value1.isEmpty ? placeholder : value1)
-                            .foregroundColor(value1.isEmpty ? .gray : .black)
+                            .foregroundColor(value1.isEmpty ? .secondary : .primary)
                         Spacer()
                         Image(systemName: "chevron.down")
-                            .foregroundColor(Color.black)
+                            .foregroundColor(Color.primary)
                             .font(Font.system(size: 20, weight: .bold))
                     }
                     .padding(.leading)
                     .padding(.horizontal)
                     .background(
                         RoundedRectangle(cornerRadius: 5)
-                            .strokeBorder(.black,lineWidth: 4)
+                            .strokeBorder(.primary,lineWidth: 4)
                             .frame(width: 100, height: 50)
                     )
                 }
