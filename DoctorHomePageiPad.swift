@@ -8,17 +8,175 @@
 import SwiftUI
 
 struct DoctorHomePageiPad: View {
+//    @State public var num = 0
     var body: some View {
+        
+        
         NavigationView(){
+            
             iPadNavBarContent()
                 .navigationTitle("Appointments")
             
-            VStack{
-                iPadUserDetails()
+//            VStack{
+//                iPadUserDetails()
+//
+//                Divider()
+//
+//                AppointmentDetailCard()
+//
+//                SegmentedControls()
+//
+//                Spacer()
+//            }
+            ScrollView {
+                Color(UIColor.systemBackground).ignoresSafeArea()
+                LazyVStack(pinnedViews: .sectionHeaders){
+                    Section(header: iPadUserDetails()){
+                        
+                        
+                        AppointmentDetailCard()
+                    }
+                    
+                    Section (header: SegmentedControls()){
+                    }
+                }
+            }
+        }
+        .navigationViewStyle(.columns)
+    }
+}
+
+struct SegmentedControls: View {
+    @State public var num = 0
+    
+    let mainView = DoctorHomePageiPad()
+    
+    var body: some View {
+        VStack{
+            Picker("", selection: $num){
+                Text("Medicines").tag(0)
+                Text("Tests").tag(1)
+                Text("Remarks").tag(2)
+            }
+            .pickerStyle(.segmented)
+            .padding(.leading)
+            .padding(.trailing)
+            
+            if num == 0 {
+                //display medicine view
+                MedicineView()
+            } else if num == 1 {
+                //display tests
+                TestsView()
+            } else {
+                //display remarks
+            }
+        }
+    }
+}
+
+struct TestsView: View {
+    var body: some View {
+        VStack{
+            Button("Add Test"){
+            }
+            .frame(width: 600, height: 50)
+            .foregroundColor(.white)
+            .background(Color.blue)
+            .cornerRadius(10)
+            .font(.title)
+            .fontWeight(.bold)
+            .padding(.top)
+            
+            List (0..<10) { item in
+                VStack(alignment: .leading) {
+                    Text ("Blood Test")
+                    Text ("18-01-2022")
+                        .font(.subheadline)
+                        .foregroundColor(.gray)
+                }
+            }
+            .listStyle(.plain)
+        }
+    }
+}
+
+struct MedicineView: View {
+    var body: some View {
+        VStack{
+            Button("Add Medicine"){
+            }
+            .frame(width: 600, height: 50)
+            .foregroundColor(.white)
+            .background(Color.blue)
+            .cornerRadius(10)
+            .font(.title)
+            .fontWeight(.bold)
+            .padding(.top)
+            
+            List (0..<10) { item in
+                VStack(alignment: .leading) {
+                    Text ("Paracetamol")
+                    Text ("1-0-1")
+                        .font(.subheadline)
+                        .foregroundColor(.gray)
+                }
+            }
+            .listStyle(.plain)
+        }
+    }
+}
+
+struct iPadNavBarTableView: View {
+    var body: some View {
+        ZStack{
+            Rectangle()
+                .foregroundColor(Color(UIColor.systemBackground))
+                .frame(height: 90)
                 
-                Divider()
+            HStack{
+                Image(systemName: "circle.fill")
+                    .font(.title)
+                    .padding(.leading)
                 
-                AppointmentDetailCard()
+//                    Spacer()
+                
+                VStack(alignment: .leading){
+                    Text("Mrs. Jane Doe")
+                        .font(.body)
+                        .minimumScaleFactor(0.3)
+                        .foregroundColor(.primary)
+                    HStack{
+                        Text("21")
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                        
+                        Text("|")
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                        
+                        Text("Female")
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                    }
+                }
+                
+                Spacer()
+                
+                ZStack{
+                    RoundedRectangle(cornerRadius: 10)
+                        .frame(width: 100, height: 40)
+                        .foregroundColor(.blue)
+                    HStack(spacing: 2){
+                        Image(systemName: "clock")
+                            .foregroundColor(.white)
+                        
+                        Text("01:00 PM")
+                            .foregroundColor(.white)
+                            .font(.caption)
+                    }
+                }
+                .padding(.trailing)
             }
         }
     }
@@ -27,9 +185,12 @@ struct DoctorHomePageiPad: View {
 struct iPadNavBarContent: View{
     var body: some View {
         ScrollView{
-            VStack{
+            VStack(spacing: 0){
+                Divider()
                 ForEach(0..<20) {index in
-                    iPadAppointmentCard()
+                    //iPadAppointmentCard()
+                    iPadNavBarTableView()
+                    Divider()
                 }
             }
         }
@@ -38,30 +199,41 @@ struct iPadNavBarContent: View{
 
 struct iPadUserDetails: View {
     var body: some View {
-        HStack(){
-            Text("Dr. Barry Allen")
-                .font(.title)
-                .fontWeight(.heavy)
-                .frame(width: 250)
-                .foregroundColor(.blue)
-            
-            Text("Urologist")
-                .font(.title3)
-            
-            Spacer()
-            
-            Text("Patient Visits for Day: 30")
-                .foregroundColor(Color(UIColor.systemBackground))
-                .padding(.leading)
-                .padding(.trailing)
-                .frame(height: 50)
-                .background(Color.blue)
-                .cornerRadius(10)
-                .fontWeight(.bold)
-                .font(.title2)
-                .padding(.trailing)
- 
+        VStack(spacing:0){
+            ZStack{
+                Rectangle()
+                    .foregroundColor(Color(UIColor.systemBackground))
+                    .frame(height: 80)
+                
+                HStack(){
+                    Text("Dr. Barry Allen")
+                        .font(.title)
+                        .fontWeight(.heavy)
+                        .frame(width: 250)
+                        .foregroundColor(.blue)
+                    
+                    Text("Urologist")
+                        .font(.title3)
+                    
+                    Spacer()
+                    
+                    Text("Patient Visits for Day: 30")
+                        .foregroundColor(Color(UIColor.systemBackground))
+                        .padding(.leading)
+                        .padding(.trailing)
+                        .frame(height: 50)
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                        .fontWeight(.bold)
+                        .font(.title2)
+                        .padding(.trailing)
+                }
+            }
+            Divider()
         }
+        
+        
+       
     }
 }
 
