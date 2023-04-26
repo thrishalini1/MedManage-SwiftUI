@@ -113,7 +113,8 @@ struct BillingView: View {
                             .frame(height: 100)
                             .foregroundColor(.gray)
                     }
-                    .frame(width: 350, height: 200)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 200)
                     .padding()
                     .background(
                         RoundedRectangle(cornerRadius: 10)
@@ -121,7 +122,7 @@ struct BillingView: View {
                             .padding(.leading,8)
                             .padding(.trailing,8)
 //                            .shadow(radius: 3)
-                            .shadow(color: colorScheme == .light ? .secondary : .white, radius: 3)
+                            .shadow(color: colorScheme == .light ? .secondary : .white, radius: 2)
 
                     )
                     
