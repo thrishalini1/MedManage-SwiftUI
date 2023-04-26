@@ -18,8 +18,8 @@ class DataModel{
         PatientProfile(
             firstName: "Thrishalini",
             lastName: "Dwaraknath",
-            patientID: "1313",
-            hospitalID: "APPOLO-DPV",
+            patientID: 71234576,
+            hospitalID:11234567,
             age: 19,
             bloodGroup: BloodGroup.Op,
             dateOfBirth: Date.now,
@@ -31,23 +31,27 @@ class DataModel{
             residentialAddressLine2: "Triplicane",
             residentialAddressLine3: "Chennai - 600 005",
             familyMembers:
-                [FamilyMember(userID: "fm1", relation: "parent", relativeName: "John Doe Sr.",DoctorRequest:true,RelativeRequest:false)],
+                [FamilyMember(userID: 71234577, relation: "parent", relativeName: "John Doe Sr.",   DoctorRequest:true,RelativeRequest:false)],
             lastVisitDate: Date.now,
             appointments: [
                 Appointment(
-                    appointmentID: "3456",
-                    hospitalID: "APPOLO-DPV",
-                    doctorID: "8890",
-                    patientID: "1313",
+                    appointmentID: 61234570,
+                    hospitalID: 11234567,
+                    doctorID: 21234569,
+                    patientID: 71234576,
+                    department: Department(departmentID: 81234570, departmentName: "Gastroenterology"),
                     diagnosisRoom: "UB5671",
-                    timeSlotStartString: "4pm",
-                    timeSlotEndString: "5pm",
-                    date: Date.now),
+                    timeSlotStartString: "4:00 PM",
+                    timeSlotEndString: "5:00 PM",
+                    date: Date.now,
+                    reports: nil
+                    ),
                 Appointment(
-                    appointmentID: "3458",
-                    hospitalID: "APPOLO-DPV",
-                    doctorID: "6778",
-                    patientID: "1313",
+                    appointmentID: 61234571,
+                    hospitalID: 11234567,
+                    doctorID: 21234569,
+                    patientID: 71234576,
+                    department: Department(departmentID: 81234570, departmentName: "Gastroenterology"),
                     diagnosisRoom: "UB5671",
                     timeSlotStartString: "5pm",
                     timeSlotEndString: "6pm",
@@ -56,23 +60,25 @@ class DataModel{
                         Report(
                             diagnosisImage: "yuio",
                             diagnosisString:"she has a common cold",
-                            reportID: "8230",
-                            appointmentID: "3458",
+                            reportID: 51234570,
+                            appointmentID: 61234571,
                             reportDate:Date.now,
                             medicines: [
                                 Medicine(
                                     medicineName:"Paracetamol",
-                                    medicineID: "770",
+                                    medicineID: 31234570,
+                                    medicinePrice: 45.60,
                                     medicineWhen: [
                                         MedicineWhen(
                                             medicineSession: MedicineSession.breakfast,
                                             medicineBOA: BOA.after,
-                                            medicineQuantityPerSession: 2
+                                            medicineQuantityPerDose: 1
                                         ),
-                                        MedicineWhen(medicineSession: MedicineSession.breakfast,
-                                                     medicineBOA: BOA.before,
-                                                     medicineQuantityPerSession: 2)
-                                    ]
+                                        MedicineWhen(medicineSession: MedicineSession.lunch,
+                                                     medicineBOA: BOA.after,
+                                                     medicineQuantityPerDose: 1)
+                                    ],
+                                    medicineDuration: 5
                                 )
                             ]
                         )
@@ -84,13 +90,13 @@ class DataModel{
         
         offers = [
             Offer(
-                offerID: "638745",
+                offerID: 91234567,
                 offerPhoto: "medicine offer",
                 textDescription: "best offer you would recieve ",
                 CoupenCode: "889995"
             ),
             Offer(
-                offerID: "638745",
+                offerID: 91234568,
                 offerPhoto: "medicine offer",
                 textDescription: "best offer you would recieve ",
                 CoupenCode: "889995"

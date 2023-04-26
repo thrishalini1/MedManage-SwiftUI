@@ -37,13 +37,14 @@ struct Report {
 struct LabTest{
     var labTestID : UInt
     var labTestName: String
-    var labTestPrice : UInt
+    var labTestPrice : Double
 }
 struct Medicine {
     var medicineName: String
     var medicineID: UInt
-    var medicinePrice: String?
+    var medicinePrice: Double
     var medicineWhen: [MedicineWhen]
+    var medicineDuration: Int
 //    var medicineDosePerDay: Int
 //    var medicine: Int
 }
@@ -52,7 +53,7 @@ struct MedicineWhen{
     var medicineSession : MedicineSession
 //    To be Taken at what time - description : before lunch , after lunch
     var medicineBOA : BOA
-    var medicineQuantityPerSession : Double
+    var medicineQuantityPerDose : Double
 //    no.of tablets
     
 }
