@@ -17,7 +17,6 @@
 		95DC2421A9CB3220637B6611 /* Pods_MedManage_SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0706AA6F216E9044646314BC /* Pods_MedManage_SwiftUI.framework */; };
 		C142308229F69C6A00EEB837 /* PatientRegistrationForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C142308129F69C6A00EEB837 /* PatientRegistrationForm.swift */; };
 		C1BA67B329F7E6A900C923C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C1BA67B229F7E6A900C923C7 /* GoogleService-Info.plist */; };
-		C1BA67B529F7F82100C923C7 /* PatientHomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BA67B429F7F82100C923C7 /* PatientHomePage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +32,6 @@
 		873944B3356E20FDD63140A3 /* Pods-MedManage-SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedManage-SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-MedManage-SwiftUI/Pods-MedManage-SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		C142308129F69C6A00EEB837 /* PatientRegistrationForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientRegistrationForm.swift; sourceTree = "<group>"; };
 		C1BA67B229F7E6A900C923C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		C1BA67B429F7F82100C923C7 /* PatientHomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientHomePage.swift; sourceTree = "<group>"; };
 		F73A72B23A99F708AAE4987A /* Pods-MedManage-SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedManage-SwiftUI.release.xcconfig"; path = "Target Support Files/Pods-MedManage-SwiftUI/Pods-MedManage-SwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,7 +53,6 @@
 				0541724D29F69AF200299405 /* OnboardingScreen.swift */,
 				0541724E29F69AF200299405 /* LoginScreen.swift */,
 				C142308129F69C6A00EEB837 /* PatientRegistrationForm.swift */,
-				C1BA67B429F7F82100C923C7 /* PatientHomePage.swift */,
 			);
 			path = PatientViews;
 			sourceTree = "<group>";
@@ -240,7 +237,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1BA67B529F7F82100C923C7 /* PatientHomePage.swift in Sources */,
 				0541725229F69AF200299405 /* OnboardingPageModel.swift in Sources */,
 				05C7526F29F69860004D3FE0 /* ContentView.swift in Sources */,
 				0541725129F69AF200299405 /* LoginScreen.swift in Sources */,
