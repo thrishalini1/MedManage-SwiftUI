@@ -10,8 +10,9 @@
 		05C7526D29F69860004D3FE0 /* MedManage_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C7526C29F69860004D3FE0 /* MedManage_SwiftUIApp.swift */; };
 		05C7526F29F69860004D3FE0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C7526E29F69860004D3FE0 /* ContentView.swift */; };
 		05C7527129F69860004D3FE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05C7527029F69860004D3FE0 /* Assets.xcassets */; };
-		05C7527429F69860004D3FE0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05C7527329F69860004D3FE0 /* Preview Assets.xcassets */; };
 		95DC2421A9CB3220637B6611 /* Pods_MedManage_SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0706AA6F216E9044646314BC /* Pods_MedManage_SwiftUI.framework */; };
+		A90EC3B429F8E6090062439D /* MedicineDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90EC3B329F8E6090062439D /* MedicineDetailView.swift */; };
+		A952525B29F7E1E300A470EA /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = A952525A29F7E1E300A470EA /* test.swift */; };
 		A9D48F9129F7ACD500CD59FF /* AppointmentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D48F9029F7ACD500CD59FF /* AppointmentDetailView.swift */; };
 		A9D48F9329F7AD3D00CD59FF /* DateAndTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D48F9229F7AD3D00CD59FF /* DateAndTimeView.swift */; };
 		A9D48F9529F7AD6900CD59FF /* afternoonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D48F9429F7AD6900CD59FF /* afternoonView.swift */; };
@@ -20,6 +21,9 @@
 		A9D48F9B29F7ADDA00CD59FF /* BillingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D48F9A29F7ADDA00CD59FF /* BillingView.swift */; };
 		A9D48F9F29F7AE4700CD59FF /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D48F9E29F7AE4700CD59FF /* SwiftUIView.swift */; };
 		A9D48FA129F7B21100CD59FF /* SpecialtiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D48FA029F7B21100CD59FF /* SpecialtiesView.swift */; };
+		A9D48FAA29F7BA5D00CD59FF /* MedicineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D48FA929F7BA5D00CD59FF /* MedicineView.swift */; };
+		A9F02B2129F8E7C400F00883 /* DaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F02B2029F8E7C400F00883 /* DaysView.swift */; };
+		A9F02B2329F8E86300F00883 /* morningOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F02B2229F8E86300F00883 /* morningOptionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +31,10 @@
 		05C7526C29F69860004D3FE0 /* MedManage_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedManage_SwiftUIApp.swift; sourceTree = "<group>"; };
 		05C7526E29F69860004D3FE0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		05C7527029F69860004D3FE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		05C7527329F69860004D3FE0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0706AA6F216E9044646314BC /* Pods_MedManage_SwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedManage_SwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873944B3356E20FDD63140A3 /* Pods-MedManage-SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedManage-SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-MedManage-SwiftUI/Pods-MedManage-SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
+		A90EC3B329F8E6090062439D /* MedicineDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineDetailView.swift; sourceTree = "<group>"; };
+		A952525A29F7E1E300A470EA /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		A9D48F9029F7ACD500CD59FF /* AppointmentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentDetailView.swift; sourceTree = "<group>"; };
 		A9D48F9229F7AD3D00CD59FF /* DateAndTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateAndTimeView.swift; sourceTree = "<group>"; };
 		A9D48F9429F7AD6900CD59FF /* afternoonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = afternoonView.swift; sourceTree = "<group>"; };
@@ -38,6 +43,9 @@
 		A9D48F9A29F7ADDA00CD59FF /* BillingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingView.swift; sourceTree = "<group>"; };
 		A9D48F9E29F7AE4700CD59FF /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		A9D48FA029F7B21100CD59FF /* SpecialtiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialtiesView.swift; sourceTree = "<group>"; };
+		A9D48FA929F7BA5D00CD59FF /* MedicineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineView.swift; sourceTree = "<group>"; };
+		A9F02B2029F8E7C400F00883 /* DaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysView.swift; sourceTree = "<group>"; };
+		A9F02B2229F8E86300F00883 /* morningOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = morningOptionView.swift; sourceTree = "<group>"; };
 		F73A72B23A99F708AAE4987A /* Pods-MedManage-SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedManage-SwiftUI.release.xcconfig"; path = "Target Support Files/Pods-MedManage-SwiftUI/Pods-MedManage-SwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,6 +64,7 @@
 		05C7526029F69860004D3FE0 = {
 			isa = PBXGroup;
 			children = (
+				A9D48FA429F7B8A200CD59FF /* iPadViews */,
 				05C7526B29F69860004D3FE0 /* MedManage-SwiftUI */,
 				05C7526A29F69860004D3FE0 /* Products */,
 				C582B5A9B7B40585DEAB6F62 /* Pods */,
@@ -84,18 +93,14 @@
 				A9D48F9A29F7ADDA00CD59FF /* BillingView.swift */,
 				A9D48FA029F7B21100CD59FF /* SpecialtiesView.swift */,
 				A9D48F9E29F7AE4700CD59FF /* SwiftUIView.swift */,
+				A9D48FA929F7BA5D00CD59FF /* MedicineView.swift */,
+				A9F02B2229F8E86300F00883 /* morningOptionView.swift */,
+				A9F02B2029F8E7C400F00883 /* DaysView.swift */,
+				A90EC3B329F8E6090062439D /* MedicineDetailView.swift */,
+				A952525A29F7E1E300A470EA /* test.swift */,
 				05C7527029F69860004D3FE0 /* Assets.xcassets */,
-				05C7527229F69860004D3FE0 /* Preview Content */,
 			);
 			path = "MedManage-SwiftUI";
-			sourceTree = "<group>";
-		};
-		05C7527229F69860004D3FE0 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				05C7527329F69860004D3FE0 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		5F4C46EB26297F7478A81B47 /* Frameworks */ = {
@@ -104,6 +109,13 @@
 				0706AA6F216E9044646314BC /* Pods_MedManage_SwiftUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A9D48FA429F7B8A200CD59FF /* iPadViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = iPadViews;
 			sourceTree = "<group>";
 		};
 		C582B5A9B7B40585DEAB6F62 /* Pods */ = {
@@ -175,7 +187,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05C7527429F69860004D3FE0 /* Preview Assets.xcassets in Resources */,
 				05C7527129F69860004D3FE0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,7 +241,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9D48F9B29F7ADDA00CD59FF /* BillingView.swift in Sources */,
+				A952525B29F7E1E300A470EA /* test.swift in Sources */,
 				05C7526F29F69860004D3FE0 /* ContentView.swift in Sources */,
+				A9F02B2329F8E86300F00883 /* morningOptionView.swift in Sources */,
+				A9F02B2129F8E7C400F00883 /* DaysView.swift in Sources */,
 				A9D48F9F29F7AE4700CD59FF /* SwiftUIView.swift in Sources */,
 				A9D48FA129F7B21100CD59FF /* SpecialtiesView.swift in Sources */,
 				A9D48F9729F7AD8900CD59FF /* morningView.swift in Sources */,
@@ -238,6 +252,8 @@
 				A9D48F9529F7AD6900CD59FF /* afternoonView.swift in Sources */,
 				05C7526D29F69860004D3FE0 /* MedManage_SwiftUIApp.swift in Sources */,
 				A9D48F9129F7ACD500CD59FF /* AppointmentDetailView.swift in Sources */,
+				A90EC3B429F8E6090062439D /* MedicineDetailView.swift in Sources */,
+				A9D48FAA29F7BA5D00CD59FF /* MedicineView.swift in Sources */,
 				A9D48F9329F7AD3D00CD59FF /* DateAndTimeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,7 +383,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MedManage-SwiftUI/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MedManage-SwiftUI\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -397,7 +413,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MedManage-SwiftUI/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MedManage-SwiftUI\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
