@@ -27,6 +27,9 @@ struct DoctorHomePageiPad: View {
                             ToolbarItem(placement: .navigationBarLeading){
                                 iPadUserDetails()
                             }
+                            ToolbarItem(placement: .navigationBarTrailing){
+                                PatientVisits()
+                            }
                         }
                     }
                     Section(){
@@ -38,6 +41,21 @@ struct DoctorHomePageiPad: View {
                 }
             }
         }
+    }
+}
+
+struct PatientVisits: View {
+    var body: some View {
+        Text("Patient Visits for Day: 30")
+            .foregroundColor(Color(UIColor.systemBackground))
+            .padding(.leading)
+            .padding(.trailing)
+            .frame(width: 300, height: 40)
+            .background(Color.blue)
+            .cornerRadius(10)
+            .fontWeight(.bold)
+            .font(.title2)
+            .minimumScaleFactor(0.7)
     }
 }
 
@@ -63,8 +81,6 @@ struct SegmentedControls: View {
                             Text("Remarks").tag(2)
                         }
                         .pickerStyle(.segmented)
-//                        .background(Color(UIColor.systemBackground))
-//                        .cornerRadius(5)
                         //.padding(.leading)
                         //.padding(.trailing)
             ){
@@ -77,13 +93,8 @@ struct SegmentedControls: View {
                 } else {
                     //display remarks
                 }
-//                AppointmentDetailCard()
-//                AppointmentDetailCard()
-//                AppointmentDetailCard()
-                
             }
         }
-        
     }
 }
 
@@ -147,10 +158,27 @@ struct TestsView: View {
 }
 
 struct RemarksView: View {
+    @State var canvas = PKCanvasView()
+    
     var body: some View {
         VStack{
-            
+            DrawingView(canvas: $canvas)
         }
+    }
+}
+
+struct DrawingView: UIViewRepresentable {
+    
+    @Binding var canvas : PKCanvasView
+    
+    func makeUIView(context: Context) -> some UIView {
+        canvas.drawingPolicy = .anyInput
+        
+        return canvas
+    }
+    
+    func updateUIView(_ uiView: UIViewType, context: Context) {
+        
     }
 }
 
@@ -226,28 +254,20 @@ struct iPadNavBarContent: View{
 
 struct iPadUserDetails: View {
     var body: some View {
-        HStack(spacing: 40){
+        HStack(spacing: 10){
             Text("Dr. Barry Allen")
                 .font(.title)
                 .fontWeight(.heavy)
                 .frame(width: 250)
                 .foregroundColor(.blue)
+                .minimumScaleFactor(0.5)
             
             Text("Urologist")
                 .font(.title3)
             
             //Spacer()
                         
-            Text("Patient Visits for Day: 30")
-                .foregroundColor(Color(UIColor.systemBackground))
-                .padding(.leading)
-                .padding(.trailing)
-                .frame(width: 300, height: 40)
-                .background(Color.blue)
-                .cornerRadius(10)
-                .fontWeight(.bold)
-                .font(.title2)
-                .minimumScaleFactor(0.7)
+            
         }
         //Spacer()
     }
@@ -352,7 +372,6 @@ struct AppointmentDetailCard: View {
                                 .frame(height: 140)
                                 .padding(.trailing, 20)
                             
-                            
                             HStack(alignment: .top, spacing:150){
                                 VStack(alignment: .leading, spacing: 5){
                                     HStack{
@@ -391,6 +410,7 @@ struct AppointmentDetailCard: View {
                                             .foregroundColor(Color(UIColor.systemBackground))
                                     }
                                 }
+                                .padding(.leading,-20)
                                 
                                 VStack(alignment: .leading, spacing: 5){
                                     HStack{
@@ -421,7 +441,9 @@ struct AppointmentDetailCard: View {
                                     }
                                 }
                                 
+                                
                             }
+                            
                         }
                     }
                     .padding(.leading)
