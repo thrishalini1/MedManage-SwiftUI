@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct Offer{
+struct Offer : Codable{
     var offerID : UInt
     var offerPhoto: String
     var textDescription : String

@@ -223,13 +223,20 @@ class DoctorProfilePage {
 //    let dateFormatter = DateFormatter()
 //    dateFormatter.dateFormat = "yyyy-mm-dd"
 
+
     var doctorProfile: [DoctorProfile] = [
+        .init(firstName: "Vijay", lastName: "Sharma", doctorID: 21234568, hospitalID: 11234567, age: 38, dateOfBirth: Date(timeIntervalSince1970: 1000000000), phoneNumber: "+91 9234534243", residentialAddressLine1: "H no. 46", residentialAddressLine2: "Indira nagar", residentialAddressLine3: "Lucknow", department: Department(departmentID: 81234567, departmentName: "Cardiology"),
+              specialization: ["Interventional Cardiology"],
+              yearsOfExperience: 10),
+        //first doctor details end here
+        
+        
         DoctorProfile(
         firstName: "John",
         lastName: "Doe",
         profilePicture: "https://example.com/profile.jpg",
 
-        
+
         doctorID: 21234567,
         hospitalID: 11234567,
         age: 35,
@@ -285,7 +292,7 @@ class DoctorProfilePage {
             )
         ]
         ),
-        // first doctor details end here
+        // second doctor details end here
     ]
 }
 

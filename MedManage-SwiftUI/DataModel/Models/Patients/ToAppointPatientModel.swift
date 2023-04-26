@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ToAppoint {
+struct ToAppoint : Codable{
     
     var speciality : UInt
 //
@@ -15,7 +15,6 @@ struct ToAppoint {
     var timeSlot:[DateInterval]?
     var timeSlotAvailableSessions:[Int]?
 //    doctorId
-
     
 }
 

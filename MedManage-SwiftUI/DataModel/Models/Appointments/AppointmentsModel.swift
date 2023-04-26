@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Appointment{
+struct Appointment : Codable{
     var appointmentID : UInt
     var hospitalID :UInt
     var doctorID : UInt
@@ -23,7 +23,7 @@ struct Appointment{
     
 }
 
-struct Report {
+struct Report : Codable {
     var diagnosisImage : String?
     var diagnosisString : String?
 //    var reportName: String
@@ -34,12 +34,12 @@ struct Report {
     var labTestsID: [LabTest]?
     
 }
-struct LabTest{
+struct LabTest : Codable{
     var labTestID : UInt
     var labTestName: String
     var labTestPrice : Double
 }
-struct Medicine {
+struct Medicine : Codable {
     var medicineName: String
     var medicineID: UInt
     var medicinePrice: Double
@@ -49,7 +49,7 @@ struct Medicine {
 //    var medicine: Int
 }
 
-struct MedicineWhen{
+struct MedicineWhen : Codable{
     var medicineSession : MedicineSession
 //    To be Taken at what time - description : before lunch , after lunch
     var medicineBOA : BOA
@@ -58,18 +58,18 @@ struct MedicineWhen{
     
 }
 
-enum MedicineSession{
+enum MedicineSession : Codable{
     case breakfast
     case lunch
     case dinner
 }
 
-enum BOA{
+enum BOA : Codable{
     case before
     case after
 }
 
-struct AppointmentSlotAvailibility{
+struct AppointmentSlotAvailibility : Codable{
     var departmentId: String
     var departmentName: String
     var listOfDoctor: [DoctorProfile]

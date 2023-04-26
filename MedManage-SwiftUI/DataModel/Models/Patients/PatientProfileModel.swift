@@ -8,14 +8,14 @@
 import Foundation
 import UIKit
 
-struct FamilyMember {
+struct FamilyMember : Codable{
     var userID : UInt
     var relation : String
     var relativeName: String
     var DoctorRequest : Bool
     var RelativeRequest : Bool
 }
-struct PatientProfile{
+struct PatientProfile : Codable{
     var firstName : String
     var lastName : String
     var profilePicture : String?
@@ -38,7 +38,7 @@ struct PatientProfile{
     
 }
 
-enum BloodGroup: String{
+enum BloodGroup: String, Codable{
 
     case Op = "O+"
     case On = "O-"

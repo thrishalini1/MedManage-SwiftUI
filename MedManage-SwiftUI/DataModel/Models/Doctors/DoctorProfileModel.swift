@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 // Doctor Profile Structure
-struct DoctorProfile {
+struct DoctorProfile : Codable {
     var firstName: String
     var lastName: String
     var profilePicture: String?
@@ -32,7 +32,7 @@ struct DoctorProfile {
 }
 
 
-struct Department {
+struct Department : Codable {
     var departmentID: Int
     var departmentName:String
 }
