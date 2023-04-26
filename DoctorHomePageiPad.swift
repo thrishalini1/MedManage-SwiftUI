@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DoctorHomePageiPad: View {
-//    @State public var num = 0
+   // @State public var num = 0
     var body: some View {
         
         
@@ -44,43 +44,62 @@ struct DoctorHomePageiPad: View {
                         
                         
                         AppointmentDetailCard()
+                        
+                        SegmentedControls()
+                        
+                        
                     }
                     
-                    Section (header: SegmentedControls()){
-                    }
+                    
                 }
             }
         }
-        
     }
 }
 
 struct SegmentedControls: View {
+    
+    init() {
+        //UISegmentedControl.appearance().selectedSegmentTintColor = .blue
+        //UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.black], for: .normal)
+        UISegmentedControl.appearance().backgroundColor = .white
+    }
+    
     @State public var num = 0
     
     let mainView = DoctorHomePageiPad()
     
     var body: some View {
-        VStack{
-            Picker("", selection: $num){
-                Text("Medicines").tag(0)
-                Text("Tests").tag(1)
-                Text("Remarks").tag(2)
-            }
-            .pickerStyle(.segmented)
-            .padding(.leading)
-            .padding(.trailing)
-            
-            if num == 0 {
-                //display medicine view
-                MedicineView()
-            } else if num == 1 {
-                //display tests
-                TestsView()
-            } else {
-                //display remarks
+        LazyVStack(pinnedViews: .sectionHeaders){
+            Section(header:
+                        Picker("", selection: $num){
+                            Text("Medicines").tag(0)
+                            Text("Tests").tag(1)
+                            Text("Remarks").tag(2)
+                        }
+                        .pickerStyle(.segmented)
+//                        .background(Color(UIColor.systemBackground))
+//                        .cornerRadius(5)
+                        //.padding(.leading)
+                        //.padding(.trailing)
+            ){
+                if num == 0 {
+                    //display medicine view
+                    MedicineView()
+                } else if num == 1 {
+                    //display tests
+                    TestsView()
+                } else {
+                    //display remarks
+                }
+//                AppointmentDetailCard()
+//                AppointmentDetailCard()
+//                AppointmentDetailCard()
+                
             }
         }
+        
     }
 }
 
@@ -97,7 +116,7 @@ struct TestsView: View {
             .fontWeight(.bold)
             .padding(.top)
             
-            List (0..<10) { item in
+            List (0..<20) { item in
                 VStack(alignment: .leading) {
                     Text ("Blood Test")
                     Text ("18-01-2022")
@@ -105,7 +124,10 @@ struct TestsView: View {
                         .foregroundColor(.gray)
                 }
             }
+            //60 * no.of items
+            .frame(height: 20*60)
             .listStyle(.plain)
+            .scrollDisabled(true)
         }
     }
 }
@@ -131,7 +153,9 @@ struct MedicineView: View {
                         .foregroundColor(.gray)
                 }
             }
+            .frame(height: 10*60)
             .listStyle(.plain)
+            .scrollDisabled(true)
         }
     }
 }
