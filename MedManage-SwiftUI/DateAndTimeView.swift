@@ -21,11 +21,12 @@ struct DateAndTimeView: View {
     var body: some View {
         
         ZStack{
-            Color.white.ignoresSafeArea()
+            Color(UIColor.systemBackground).ignoresSafeArea()
             VStack{
                 HStack
                 {
                     Text("Date And Time")
+                        .foregroundColor(.primary)
                         .font(.system(size: 35))
                         .fontWeight(.bold)
                         .frame(maxWidth: .infinity,  alignment: .leading)
@@ -34,6 +35,7 @@ struct DateAndTimeView: View {
                 }
                 
                 Text("Select a date")
+                    .foregroundColor(.primary)
                     .padding(.top)
                     .fontWeight(.bold)
                     .font(.system(size: 20))
@@ -51,6 +53,7 @@ struct DateAndTimeView: View {
                         .labelsHidden()
                 }
                 Text("Select a time")
+                    .foregroundColor(.primary)
                     .padding(.top,30)
                     .fontWeight(.bold)
                     .font(.system(size: 20))
@@ -91,9 +94,8 @@ struct DateAndTimeView: View {
                     .padding(.top)
                     .padding()
                     .padding()
-                    .foregroundColor(.gray)
+                    .foregroundColor(.secondary)
                     .frame(alignment: .center)
-//                Spacer()
                 
                 Button{
                     
