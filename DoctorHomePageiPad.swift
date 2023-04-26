@@ -6,51 +6,35 @@
 //
 
 import SwiftUI
+import PencilKit
 
 struct DoctorHomePageiPad: View {
-   // @State public var num = 0
+    init(){
+        UINavigationBar.appearance().barTintColor = UIColor.systemBackground
+    }
+    
     var body: some View {
-        
-        
         NavigationView(){
-            
             iPadNavBarContent()
                 .navigationTitle("Appointments")
                 
-            
-//            VStack{
-//                iPadUserDetails()
-//
-//                Divider()
-//
-//                AppointmentDetailCard()
-//
-//                SegmentedControls()
-//
-//                Spacer()
-//            }
             ScrollView {
                 //Color(UIColor.systemBackground).ignoresSafeArea()
                 LazyVStack(pinnedViews: .sectionHeaders){
                     Section{
                         Text("")
                         .toolbar{
-                            ToolbarItem(placement: .navigation){
+                            ToolbarItem(placement: .navigationBarLeading){
                                 iPadUserDetails()
                             }
                         }
                     }
                     Section(){
-                        
-                        
                         AppointmentDetailCard()
+                            //.padding(.top,-10)
                         
                         SegmentedControls()
-                        
-                        
                     }
-                    
-                    
                 }
             }
         }
@@ -103,35 +87,6 @@ struct SegmentedControls: View {
     }
 }
 
-struct TestsView: View {
-    var body: some View {
-        VStack{
-            Button("Add Test"){
-            }
-            .frame(width: 600, height: 50)
-            .foregroundColor(.white)
-            .background(Color.blue)
-            .cornerRadius(10)
-            .font(.title)
-            .fontWeight(.bold)
-            .padding(.top)
-            
-            List (0..<20) { item in
-                VStack(alignment: .leading) {
-                    Text ("Blood Test")
-                    Text ("18-01-2022")
-                        .font(.subheadline)
-                        .foregroundColor(.gray)
-                }
-            }
-            //60 * no.of items
-            .frame(height: 20*60)
-            .listStyle(.plain)
-            .scrollDisabled(true)
-        }
-    }
-}
-
 struct MedicineView: View {
     var body: some View {
         VStack{
@@ -148,6 +103,7 @@ struct MedicineView: View {
             List (0..<10) { item in
                 VStack(alignment: .leading) {
                     Text ("Paracetamol")
+                        .foregroundColor(Color(UIColor.label))
                     Text ("1-0-1")
                         .font(.subheadline)
                         .foregroundColor(.gray)
@@ -156,6 +112,44 @@ struct MedicineView: View {
             .frame(height: 10*60)
             .listStyle(.plain)
             .scrollDisabled(true)
+        }
+    }
+}
+
+struct TestsView: View {
+    var body: some View {
+        VStack{
+            Button("Add Test"){
+            }
+            .frame(width: 600, height: 50)
+            .foregroundColor(Color(UIColor.white))
+            .background(Color.blue)
+            .cornerRadius(10)
+            .font(.title)
+            .fontWeight(.bold)
+            .padding(.top)
+            
+            List (0..<20) { item in
+                VStack(alignment: .leading) {
+                    Text ("Blood Test")
+                        .foregroundColor(Color(UIColor.label))
+                    Text ("18-01-2022")
+                        .font(.subheadline)
+                        .foregroundColor(.gray)
+                }
+            }
+            //60 * no.of items
+            .frame(height: 20*60)
+            .listStyle(.plain)
+            .scrollDisabled(true)
+        }
+    }
+}
+
+struct RemarksView: View {
+    var body: some View {
+        VStack{
+            
         }
     }
 }
@@ -239,24 +233,23 @@ struct iPadUserDetails: View {
                 .frame(width: 250)
                 .foregroundColor(.blue)
             
-            Spacer()
-            
             Text("Urologist")
                 .font(.title3)
             
-            Spacer()
-            
+            //Spacer()
+                        
             Text("Patient Visits for Day: 30")
                 .foregroundColor(Color(UIColor.systemBackground))
                 .padding(.leading)
                 .padding(.trailing)
-                .frame(height: 40)
+                .frame(width: 300, height: 40)
                 .background(Color.blue)
                 .cornerRadius(10)
                 .fontWeight(.bold)
                 .font(.title2)
                 .minimumScaleFactor(0.7)
         }
+        //Spacer()
     }
 }
 
