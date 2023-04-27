@@ -164,7 +164,7 @@ struct UpcomingAppointmentCard: View {
                 }
                 
                 VStack(alignment: .leading, spacing: -5){
-                    Text("Dr. Ranit Patel")
+                    Text("Dr. Barry Allen")
                         .font(.largeTitle)
                         .foregroundColor(Color(UIColor.systemBackground))
                         .fontWeight(.heavy)

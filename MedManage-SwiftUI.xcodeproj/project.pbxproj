@@ -27,6 +27,7 @@
 		C914746C29F6A230009E8F23 /* DoctorHomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C914746B29F6A230009E8F23 /* DoctorHomePage.swift */; };
 		C914746E29F6A25B009E8F23 /* AppointmentDetailModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C914746D29F6A25B009E8F23 /* AppointmentDetailModalView.swift */; };
 		C914747029F6A58D009E8F23 /* PatientHomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C914746F29F6A58D009E8F23 /* PatientHomePage.swift */; };
+		C9587E8129F7D0EE0056E90F /* DoctorHomePageiPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9587E8029F7D0EE0056E90F /* DoctorHomePageiPad.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		C914746B29F6A230009E8F23 /* DoctorHomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorHomePage.swift; sourceTree = "<group>"; };
 		C914746D29F6A25B009E8F23 /* AppointmentDetailModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentDetailModalView.swift; sourceTree = "<group>"; };
 		C914746F29F6A58D009E8F23 /* PatientHomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientHomePage.swift; sourceTree = "<group>"; };
+		C9587E8029F7D0EE0056E90F /* DoctorHomePageiPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorHomePageiPad.swift; sourceTree = "<group>"; };
 		F73A72B23A99F708AAE4987A /* Pods-MedManage-SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedManage-SwiftUI.release.xcconfig"; path = "Target Support Files/Pods-MedManage-SwiftUI/Pods-MedManage-SwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				A9D48FA429F7B8A200CD59FF /* iPadViews */,
+				C9587E8029F7D0EE0056E90F /* DoctorHomePageiPad.swift */,
 				05C7526B29F69860004D3FE0 /* MedManage-SwiftUI */,
 				05C7526A29F69860004D3FE0 /* Products */,
 				C582B5A9B7B40585DEAB6F62 /* Pods */,
@@ -250,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9D48F9B29F7ADDA00CD59FF /* BillingView.swift in Sources */,
+				C9587E8129F7D0EE0056E90F /* DoctorHomePageiPad.swift in Sources */,
 				C914747029F6A58D009E8F23 /* PatientHomePage.swift in Sources */,
 				05C7526F29F69860004D3FE0 /* ContentView.swift in Sources */,
 				A9F02B2329F8E86300F00883 /* morningOptionView.swift in Sources */,

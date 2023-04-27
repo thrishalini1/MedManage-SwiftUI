@@ -16,6 +16,11 @@ struct DoctorHomePage: View {
         TabView{
             NavigationView{
                 PageContent()
+//                    .toolbar{
+//                        ToolbarItem(placement: .navigationBarLeading){
+//                            UserDetails()
+//                        }
+//                    }
             }
             .tabItem {
                 Label("Home", systemImage: "house")
