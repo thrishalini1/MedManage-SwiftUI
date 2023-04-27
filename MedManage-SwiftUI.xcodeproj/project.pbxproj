@@ -11,6 +11,7 @@
 		05C7526F29F69860004D3FE0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C7526E29F69860004D3FE0 /* ContentView.swift */; };
 		05C7527129F69860004D3FE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05C7527029F69860004D3FE0 /* Assets.xcassets */; };
 		95DC2421A9CB3220637B6611 /* Pods_MedManage_SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0706AA6F216E9044646314BC /* Pods_MedManage_SwiftUI.framework */; };
+
 		A90EC3B429F8E6090062439D /* MedicineDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90EC3B329F8E6090062439D /* MedicineDetailView.swift */; };
 		A9D48F9129F7ACD500CD59FF /* AppointmentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D48F9029F7ACD500CD59FF /* AppointmentDetailView.swift */; };
 		A9D48F9329F7AD3D00CD59FF /* DateAndTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D48F9229F7AD3D00CD59FF /* DateAndTimeView.swift */; };
@@ -23,6 +24,9 @@
 		A9D48FAA29F7BA5D00CD59FF /* MedicineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D48FA929F7BA5D00CD59FF /* MedicineView.swift */; };
 		A9F02B2129F8E7C400F00883 /* DaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F02B2029F8E7C400F00883 /* DaysView.swift */; };
 		A9F02B2329F8E86300F00883 /* morningOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F02B2229F8E86300F00883 /* morningOptionView.swift */; };
+		C914746C29F6A230009E8F23 /* DoctorHomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C914746B29F6A230009E8F23 /* DoctorHomePage.swift */; };
+		C914746E29F6A25B009E8F23 /* AppointmentDetailModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C914746D29F6A25B009E8F23 /* AppointmentDetailModalView.swift */; };
+		C914747029F6A58D009E8F23 /* PatientHomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C914746F29F6A58D009E8F23 /* PatientHomePage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,7 @@
 		05C7527029F69860004D3FE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0706AA6F216E9044646314BC /* Pods_MedManage_SwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedManage_SwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873944B3356E20FDD63140A3 /* Pods-MedManage-SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedManage-SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-MedManage-SwiftUI/Pods-MedManage-SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
+
 		A90EC3B329F8E6090062439D /* MedicineDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineDetailView.swift; sourceTree = "<group>"; };
 		A9D48F9029F7ACD500CD59FF /* AppointmentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentDetailView.swift; sourceTree = "<group>"; };
 		A9D48F9229F7AD3D00CD59FF /* DateAndTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateAndTimeView.swift; sourceTree = "<group>"; };
@@ -44,6 +49,10 @@
 		A9D48FA929F7BA5D00CD59FF /* MedicineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineView.swift; sourceTree = "<group>"; };
 		A9F02B2029F8E7C400F00883 /* DaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysView.swift; sourceTree = "<group>"; };
 		A9F02B2229F8E86300F00883 /* morningOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = morningOptionView.swift; sourceTree = "<group>"; };
+
+		C914746B29F6A230009E8F23 /* DoctorHomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorHomePage.swift; sourceTree = "<group>"; };
+		C914746D29F6A25B009E8F23 /* AppointmentDetailModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentDetailModalView.swift; sourceTree = "<group>"; };
+		C914746F29F6A58D009E8F23 /* PatientHomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientHomePage.swift; sourceTree = "<group>"; };
 		F73A72B23A99F708AAE4987A /* Pods-MedManage-SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedManage-SwiftUI.release.xcconfig"; path = "Target Support Files/Pods-MedManage-SwiftUI/Pods-MedManage-SwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +104,9 @@
 				A9F02B2229F8E86300F00883 /* morningOptionView.swift */,
 				A9F02B2029F8E7C400F00883 /* DaysView.swift */,
 				A90EC3B329F8E6090062439D /* MedicineDetailView.swift */,
+				C914746B29F6A230009E8F23 /* DoctorHomePage.swift */,
+				C914746F29F6A58D009E8F23 /* PatientHomePage.swift */,
+				C914746D29F6A25B009E8F23 /* AppointmentDetailModalView.swift */,
 				05C7527029F69860004D3FE0 /* Assets.xcassets */,
 			);
 			path = "MedManage-SwiftUI";
@@ -238,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9D48F9B29F7ADDA00CD59FF /* BillingView.swift in Sources */,
+				C914747029F6A58D009E8F23 /* PatientHomePage.swift in Sources */,
 				05C7526F29F69860004D3FE0 /* ContentView.swift in Sources */,
 				A9F02B2329F8E86300F00883 /* morningOptionView.swift in Sources */,
 				A9F02B2129F8E7C400F00883 /* DaysView.swift in Sources */,
@@ -251,6 +264,8 @@
 				A90EC3B429F8E6090062439D /* MedicineDetailView.swift in Sources */,
 				A9D48FAA29F7BA5D00CD59FF /* MedicineView.swift in Sources */,
 				A9D48F9329F7AD3D00CD59FF /* DateAndTimeView.swift in Sources */,
+				C914746E29F6A25B009E8F23 /* AppointmentDetailModalView.swift in Sources */,
+				C914746C29F6A230009E8F23 /* DoctorHomePage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
