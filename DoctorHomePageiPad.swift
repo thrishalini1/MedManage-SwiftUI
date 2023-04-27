@@ -86,7 +86,7 @@ struct SegmentedControls: View {
             ){
                 if num == 0 {
                     //display medicine view
-                    MedicineView()
+                    MiniPrescriptionView()
                 } else if num == 1 {
                     //display tests
                     TestsView()
@@ -99,7 +99,7 @@ struct SegmentedControls: View {
     }
 }
 
-struct MedicineView: View {
+struct MiniPrescriptionView: View {
     var body: some View {
         VStack{
             Button("Add Medicine"){
