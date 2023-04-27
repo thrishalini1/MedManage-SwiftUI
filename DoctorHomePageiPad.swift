@@ -92,6 +92,7 @@ struct SegmentedControls: View {
                     TestsView()
                 } else {
                     //display remarks
+                    RemarksView()
                 }
             }
         }
@@ -142,7 +143,7 @@ struct TestsView: View {
             
             List (0..<20) { item in
                 VStack(alignment: .leading) {
-                    Text ("Blood Test")
+                    Text ("Prostate Test")
                         .foregroundColor(Color(UIColor.label))
                     Text ("18-01-2022")
                         .font(.subheadline)
@@ -163,6 +164,7 @@ struct RemarksView: View {
     var body: some View {
         VStack{
             DrawingView(canvas: $canvas)
+                .frame(width: UIScreen.main.bounds.width, height: 3000)
         }
     }
 }
@@ -172,8 +174,8 @@ struct DrawingView: UIViewRepresentable {
     @Binding var canvas : PKCanvasView
     
     func makeUIView(context: Context) -> some UIView {
-        canvas.drawingPolicy = .anyInput
-        
+        canvas.drawingPolicy = .pencilOnly
+            
         return canvas
     }
     
@@ -264,12 +266,7 @@ struct iPadUserDetails: View {
             
             Text("Urologist")
                 .font(.title3)
-            
-            //Spacer()
-                        
-            
         }
-        //Spacer()
     }
 }
 
@@ -382,7 +379,7 @@ struct AppointmentDetailCard: View {
                                         Text("21 Years")
                                             .foregroundColor(Color(UIColor.systemBackground))
                                     }
-                                    
+             
                                     HStack{
                                         Text("Gender:")
                                             .foregroundColor(Color(UIColor.systemBackground))
