@@ -35,6 +35,7 @@ struct MedicineView: View {
             Color(UIColor.systemBackground).ignoresSafeArea()
             VStack{
                 MedicineDetailView()
+                    .padding(.bottom,40)
                 DaysView()
                 Group{
                     Text("Frequency")
